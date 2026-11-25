@@ -1,0 +1,19 @@
+.env
+.venv/
+__pycache__/
+.pytest_cache/
+.pytest_tmp/
+.playwright-mcp/
+
+# 주최 측 교육 자료와 서식 원본 (재배포 금지 자료라 올리지 않는다)
+docs/lms/
+docs/reference/
+docs/00_대회규칙.md
+
+# 녹화 프레임과 화면 캡처 (용량)
+work/runs/demo/
+work/runs/aramco_ref/
+work/runs/*.png
+work/pdf/
+*.mp4
+!submission/*.mp4

@@ -1,0 +1,20 @@
+[project]
+name = "aramco-hackathon"
+version = "0.1.0"
+description = "2026 Energy AI Workflow Hackathon 작업장"
+requires-python = ">=3.11"
+dependencies = [
+    "openpyxl>=3.1",
+    "pillow>=10.0",
+    "pymupdf>=1.24",
+    "pypdf>=4.0",
+    "python-docx>=1.2.0",
+]
+
+[dependency-groups]
+dev = ["pytest>=8.0"]
+
+[tool.pytest.ini_options]
+pythonpath = ["tools"]
+testpaths = ["tests"]
+addopts = "--basetemp=.pytest_tmp"

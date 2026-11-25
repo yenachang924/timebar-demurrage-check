@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>TimeBar — Tanker Demurrage Claim Evidence Check</title>
+<style>
+@page { size: 13.333in 7.5in; margin: 0; }
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { font-family: "Segoe UI", Arial, "Malgun Gothic", sans-serif; color: #14213d; }
+.slide { width: 13.333in; height: 7.5in; padding: 0.6in 0.75in 0.5in; page-break-after: always; position: relative; overflow: hidden; background: #fff; }
+.slide:last-child { page-break-after: auto; }
+.tag { font-size: 12pt; letter-spacing: 1.5px; text-transform: uppercase; color: #0b7a75; font-weight: 700; }
+h1 { font-size: 34pt; margin: 6px 0 10px; line-height: 1.12; }
+h2 { font-size: 27pt; margin: 6px 0 18px; line-height: 1.15; }
+p, li, td, th { font-size: 15pt; line-height: 1.4; }
+.lead { font-size: 18pt; color: #33415c; max-width: 10.5in; }
+.foot { position: absolute; left: 0.75in; right: 0.75in; bottom: 0.25in; font-size: 9.5pt; color: #6b7280; display: flex; justify-content: space-between; }
+.cols { display: flex; gap: 0.4in; }
+.cols > div { flex: 1; }
+.card { border: 1.5px solid #d6dbe4; border-radius: 10px; padding: 14px 18px; background: #f8fafc; }
+.card h3 { margin: 0 0 6px; font-size: 16pt; }
+.big { font-size: 38pt; font-weight: 800; color: #0b7a75; line-height: 1; }
+.small { font-size: 11.5pt; color: #4b5563; }
+table { border-collapse: collapse; width: 100%; }
+.slide td, .slide th { font-size: 11.5pt; padding: 5px 8px; }
+th { text-align: left; background: #14213d; color: #fff; padding: 7px 10px; font-size: 12.5pt; }
+td { border-bottom: 1px solid #d6dbe4; padding: 7px 10px; font-size: 12.5pt; vertical-align: top; }
+.flow { display: flex; align-items: stretch; gap: 8px; margin: 12px 0 16px; }
+.node { flex: 1; border-radius: 10px; padding: 10px 10px; color: #fff; font-size: 12pt; line-height: 1.3; }
+.node b { display: block; font-size: 14pt; margin-bottom: 4px; }
+.arrow { align-self: center; font-size: 18pt; color: #6b7280; }
+.n1 { background: #4f46e5; } .n2 { background: #ea580c; } .n3 { background: #db2777; } .n4 { background: #475569; } .n5 { background: #0b7a75; } .n6 { background: #0369a1; }
+.pill { display: inline-block; padding: 4px 12px; border-radius: 999px; font-weight: 700; font-size: 13pt; margin: 2px 6px 2px 0; }
+.ok { background: #dcfce7; color: #166534; } .fix { background: #fef3c7; color: #92400e; } .late { background: #fee2e2; color: #991b1b; } .rev { background: #e0e7ff; color: #3730a3; }
+.todo { background: #fff7ed; border: 2px dashed #ea580c; color: #9a3412; padding: 10px 14px; border-radius: 8px; font-size: 13pt; }
+.title { background: #14213d; color: #fff; display: flex; flex-direction: column; justify-content: center; }
+.title .tag { color: #5eead4; } .title .lead { color: #cbd5e1; } .title h1 { font-size: 46pt; }
+code { font-family: Consolas, monospace; font-size: 12.5pt; background: #eef2f7; padding: 1px 5px; border-radius: 4px; }
+</style>
+</head>
+<body>
+
+<section class="slide title">
+  <div class="tag">Aramco × KU × Upstage · Energy AI Workflow Hackathon 2026</div>
+  <h1>TimeBar<br>Tanker Demurrage Claim Evidence Check</h1>
+  <p class="lead">A Studio workflow that tells a charterer's claims handler, in one pass, whether a demurrage claim package is complete, signed, on time and consistent — and drafts the next document.</p>
+  <p class="lead" style="margin-top:28px;font-size:14pt">Team TimeBar · Yena Chang (Inha University)</p>
+</section>
+
+<section class="slide">
+  <div class="tag">1 · Problem definition</div>
+  <h2>One missing signature can erase the whole claim</h2>
+  <div class="cols">
+    <div>
+      <table>
+        <tr><th>English Commercial Court</th><th>What was missing</th><th>Claim lost</th></tr>
+        <tr><td>The Sabrewing [2007]</td><td>Pumping log not signed by ship or terminal</td><td>USD 114,887</td></tr>
+        <tr><td>The Adventure [2015], BPVOY4</td><td>Port log and time sheets referred to in a protest</td><td>USD 364,848</td></tr>
+        <tr><td>MTM Hong Kong [2020]</td><td>Copies of two bills of lading</td><td>USD 56,049</td></tr>
+      </table>
+      <p class="small" style="margin-top:10px">BPVOY4 cl. 20.1: the claim and <i>all supporting documentation</i> must reach charterers within 90 days of completion of discharge, or charterers are released from liability.</p>
+    </div>
+    <div>
+      <div class="card" style="margin-bottom:12px"><div class="big">6.3 mmbpd</div><p class="small">Aramco crude exports, 2025 average (Aramco Annual Report 2025)</p></div>
+      <div class="card" style="margin-bottom:12px"><div class="big">USD 45,000 / day</div><p class="small">VLCC demurrage, Mideast Gulf–East (Argus Tanker Freight, 24 Jul 2025)</p></div>
+      <div class="card"><p style="margin:0;font-size:13pt">Aramco's own terminal rules address vessels that "make a demurrage claim against Saudi Aramco" (Ports and Terminals Rules 2025, §11.1.2).</p></div>
+    </div>
+  </div>
+  <div class="foot"><span>Sources on the last slide</span><span>2</span></div>
+</section>
+
+<section class="slide">
+  <div class="tag">1 · Problem definition</div>
+  <h2>Whose task, and what they do today</h2>
+  <div class="cols">
+    <div class="card">
+      <h3>The user</h3>
+      <p>The demurrage claims handler on the charterer's side. After discharge, the shipowner sends a claim invoice with a bundle of evidence.</p>
+      <h3 style="margin-top:14px">Today</h3>
+      <p>The handler opens five or six documents side by side and checks by eye: is everything here, is it signed, did it arrive in time, do the times agree?</p>
+    </div>
+    <div class="card">
+      <h3>One claim package = one PDF</h3>
+      <ul style="margin:6px 0 0 18px;padding:0">
+        <li>Demurrage Claim Invoice</li>
+        <li>Claim Receipt Record (charterer's register)</li>
+        <li>Notice of Readiness</li>
+        <li>Statement of Facts</li>
+        <li>Cargo Pumping Log</li>
+        <li>Letter of Protest (when issued)</li>
+      </ul>
+      <p class="small" style="margin-top:10px">Scope: evidence, signatures, time bar and time consistency. The laytime and amount calculation stays with the handler.</p>
+    </div>
+  </div>
+  <div class="foot"><span>All documents in the dataset are fictional</span><span>3</span></div>
+</section>
+
+<section class="slide">
+  <div class="tag">2 · Workflow design</div>
+  <h2>The handler's steps, one node each</h2>
+  <div class="flow">
+    <div class="node n1"><b>Parse</b>OCR on, so scanned pages are read</div><div class="arrow">→</div>
+    <div class="node n2"><b>Classify</b>Split the PDF into 6 document types + Other</div><div class="arrow">→</div>
+    <div class="node n3"><b>Extract × 6</b>Dates as YYYY-MM-DD HH:MM, signature present or not, readability</div><div class="arrow">→</div>
+    <div class="node n4"><b>Merge</b>One claim, one record, so documents can be compared</div><div class="arrow">→</div>
+    <div class="node n5"><b>Instruct · decision</b>Fixed order of checks, five output keys</div><div class="arrow">→</div>
+    <div class="node n6"><b>Instruct × 4</b>The follow-up document for each decision</div>
+  </div>
+  <div class="cols">
+    <div class="card">
+      <h3>Started from Use Case card U038</h3>
+      <p style="font-size:13.5pt">"Container demurrage free-time recalculation". We changed the cargo to crude tankers, and the decision from <i>recalculating the amount</i> to <i>checking evidence, signatures, time bar and time consistency</i> — because that is where tanker claims are won or lost.</p>
+    </div>
+    <div class="card">
+      <h3>What we added to the card</h3>
+      <p style="font-size:13.5pt">3 document types → 6. New exception cases: unsigned pumping log, unsigned log with a protest attached, receipt on the time-bar date, another vessel's document in the bundle, a smudged scan, a second terminal's form.</p>
+    </div>
+  </div>
+  <div class="foot"><span>Other documents go to a separate "unclassified" note and never affect the decision</span><span>4</span></div>
+</section>
+
+<section class="slide">
+  <div class="tag">2 · Workflow design</div>
+  <h2>Four decisions, checked in a fixed order</h2>
+  <table>
+    <tr><th style="width:5%">#</th><th style="width:25%">Decision</th><th>When</th><th style="width:30%">What the handler gets</th></tr>
+    <tr><td>1</td><td><span class="pill rev">검토 필요 · Review needed</span></td><td>Another vessel's document, unreadable value, invoice time ≠ Statement of Facts, or unsigned log with a protest attached</td><td>Memo: which document, which value, where to look</td></tr>
+    <tr><td>2</td><td><span class="pill late">기한 위험 · Time-bar risk</span></td><td>Date received is later than the time-bar date (90 days after discharge)</td><td>Memo with both dates; no rejection is asserted</td></tr>
+    <tr><td>3</td><td><span class="pill fix">보완 요청 · Request documents</span></td><td>A required document is missing, or the pumping log has no terminal signature and no protest</td><td>Draft letter to owners listing what is missing</td></tr>
+    <tr><td>4</td><td><span class="pill ok">지급 검토 가능 · Clear for payment review</span></td><td>All checks pass (received on the time-bar date counts as in time)</td><td>Payment-review memo with the confirmed facts</td></tr>
+  </table>
+  <p style="margin-top:14px">Output keys, identical in the workflow and the answer key: <code>claim_no</code> <code>vessel_name</code> <code>decision</code> <code>reason</code> <code>missing_documents</code></p>
+  <div class="foot"><span>The workflow never outputs "reject": courts have ruled both ways on similar facts (The Amalie Essberger [2019])</span><span>5</span></div>
+</section>
+
+<section class="slide">
+  <div class="tag">3 · Reliability design</div>
+  <h2>When unsure, it hands over — it does not guess</h2>
+  <div class="cols">
+    <div class="card">
+      <h3>Smudged scan</h3>
+      <p style="font-size:13.5pt">The "Hoses Disconnected" time is covered by ink on a tilted scan. The workflow must not fill it in → <b>Review needed</b>.</p>
+    </div>
+    <div class="card">
+      <h3>Contract is silent</h3>
+      <p style="font-size:13.5pt">Unsigned pumping log, protest attached. BPVOY4 does not say a protest replaces the signature (that wording is in BPVOY3). We do not assume → <b>Review needed</b>.</p>
+    </div>
+    <div class="card">
+      <h3>No arithmetic by the model</h3>
+      <p style="font-size:13.5pt">The time-bar date is read from the charterer's receipt record and compared with the date received. The model never counts 90 days itself.</p>
+    </div>
+  </div>
+  <div class="cols" style="margin-top:16px">
+    <div class="card">
+      <h3>Test set built to break it</h3>
+      <p style="font-size:13.5pt">10 claim packages, 51 documents, all four types: simple 28 · other forms 8 · exceptions 10 · low quality 6. Every decision value is tested.</p>
+    </div>
+    <div class="card">
+      <h3>Maker and checker are different AIs</h3>
+      <p style="font-size:13.5pt">Upstage Studio reads and decides. Claude built the test documents and scores the runs. The answer key comes from rule code, not from either model's output.</p>
+    </div>
+  </div>
+  <div class="foot"><span>Every legal and market fact in this deck has a source; anything unverified was left out</span><span>6</span></div>
+</section>
+
+<section class="slide">
+  <div class="tag">3 · Reliability design</div>
+  <h2>Results: 10 of 10 decisions match the answer key</h2>
+  <div class="cols">
+    <div style="flex:1.7">
+      <table>
+        <tr><th>Case</th><th>Situation</th><th>Expected</th><th>Config #2</th><th>Config #3</th><th>Config #4</th></tr>
+        <tr><td>set01</td><td>Complete package</td><td>지급 검토 가능</td><td style="text-align:center">✓</td><td style="text-align:center">✓</td><td style="text-align:center">✓</td></tr><tr><td>set02</td><td>Pumping log unsigned, no protest</td><td>보완 요청</td><td style="text-align:center">✓</td><td style="text-align:center">✓</td><td style="text-align:center">✓</td></tr><tr><td>set03</td><td>Received one day after the time-bar date</td><td>기한 위험</td><td style="text-align:center">✗ 검토 필요</td><td style="text-align:center">✓</td><td style="text-align:center">✓</td></tr><tr><td>set04</td><td>Received on the time-bar date</td><td>지급 검토 가능</td><td style="text-align:center">✓</td><td style="text-align:center">✓</td><td style="text-align:center">✓</td></tr><tr><td>set05</td><td>Notice of Readiness missing</td><td>보완 요청</td><td style="text-align:center">✓</td><td style="text-align:center">✓</td><td style="text-align:center">✓</td></tr><tr><td>set06</td><td>Unsigned log with protest attached</td><td>검토 필요</td><td style="text-align:center">✓</td><td style="text-align:center">✓</td><td style="text-align:center">✓</td></tr><tr><td>set07</td><td>Invoice time 6 hours later than Statement of Facts</td><td>검토 필요</td><td style="text-align:center">✓</td><td style="text-align:center">✓</td><td style="text-align:center">✓</td></tr><tr><td>set08</td><td>Another vessel's pumping log in the bundle</td><td>검토 필요</td><td style="text-align:center">✓</td><td style="text-align:center">✓</td><td style="text-align:center">✓</td></tr><tr><td>set09</td><td>Tilted, blurred scan with a covered value</td><td>검토 필요</td><td style="text-align:center">✓</td><td style="text-align:center">✓</td><td style="text-align:center">✓</td></tr><tr><td>set10</td><td>Second terminal's form, extra receipt in the bundle</td><td>지급 검토 가능</td><td style="text-align:center">✓</td><td style="text-align:center">✓</td><td style="text-align:center">✓</td></tr>
+      </table>
+    </div>
+    <div>
+      <div class="card" style="margin-bottom:10px"><div class="big">10 / 10</div><p class="small">decisions correct on the full run of config #3 and again on config #4 (the submitted version)</p></div>
+      <div class="card" style="margin-bottom:10px"><h3>The one failure, and the fix</h3><p style="font-size:12.5pt;margin:0">set03 should be <b>time-bar risk</b>. The first full run said <b>review needed</b>: the extraction marked a clean, dense 50-row pumping log as "unclear". I removed the readability flag from that document and narrowed it to covered or smudged boxes on the Statement of Facts.</p></div>
+      <div class="card"><div class="big" style="font-size:26pt">25–50 s</div><p class="small">per claim package in Studio (limit: 15 minutes)</p></div>
+    </div>
+  </div>
+  <div class="foot"><span>Decision and missing-document values read from the Studio run results on 25 Nov 2026. The wording of each reason differs between runs; the grounds are the same.</span><span>7</span></div>
+</section>
+
+<section class="slide">
+  <div class="tag">4 · Service completeness</div>
+  <h2>The handler can do the next thing immediately</h2>
+  <div class="cols">
+    <div style="flex:1.55"><img src="shot_letter_crop.png" style="width:100%;border:1.5px solid #d6dbe4;border-radius:8px"></div>
+    <div>
+      <div class="card" style="margin-bottom:10px"><h3>Request documents</h3><p style="font-size:12.5pt;margin:0">A draft letter to owners in English: claim number, vessel, the unsigned or missing document, the time-bar date, charterers' rights reserved. Shown: set02, unsigned pumping log.</p></div>
+      <div class="card" style="margin-bottom:10px"><h3>Time-bar risk · Review needed</h3><p style="font-size:12.5pt;margin:0">A short memo: the two dates, or the document and value that disagree, and where to look in the original.</p></div>
+      <div class="card"><h3>Clear for payment review</h3><p style="font-size:12.5pt;margin:0">A memo of what was confirmed, so the handler goes straight to the laytime calculation.</p></div>
+    </div>
+  </div>
+  <div class="foot"><span>Screenshot: Upstage Studio, config #4, run of 25 Nov 2026. Left: source page (terminal signature line empty). Right: generated draft.</span><span>8</span></div>
+</section>
+
+<section class="slide">
+  <div class="tag">Sources</div>
+  <h2>Where the facts come from</h2>
+  <table>
+    <tr><th style="width:38%">Fact</th><th>Source</th></tr>
+    <tr><td>BPVOY4 cl. 20.1 (90 days, all supporting documentation); The Adventure, USD 364,847.78</td><td>Kassiopi Maritime v Fal Shipping [2015] EWHC 318 (Comm) — caselaw.nationalarchives.gov.uk/ewhc/comm/2015/318</td></tr>
+    <tr><td>The Sabrewing, USD 114,887.40 (BPVOY3 cl. 16(a))</td><td>Waterfront Shipping v Trafigura [2007] EWHC 2482 (Comm) — caselaw.nationalarchives.gov.uk/ewhc/comm/2007/2482</td></tr>
+    <tr><td>MTM Hong Kong, USD 56,049.36</td><td>Tricon Energy v MTM Trading [2020] EWHC 700 (Comm) — caselaw.nationalarchives.gov.uk/ewhc/comm/2020/700</td></tr>
+    <tr><td>Owners succeeded on similar facts</td><td>The Amalie Essberger [2019] EWHC 3402 (Comm) — caselaw.nationalarchives.gov.uk/ewhc/comm/2019/3402</td></tr>
+    <tr><td>Crude exports 6.3 mmbpd (2025)</td><td>Aramco Annual Report 2025, Results section, p. 61 — aramco.com</td></tr>
+    <tr><td>Demurrage claims against Saudi Aramco, §11.1.2</td><td>Saudi Aramco Ports and Terminals — Rules, Regulations and General Information, 2025 Edition — aramco.com</td></tr>
+    <tr><td>VLCC demurrage USD 45,000/day, Mideast Gulf–East</td><td>Argus Tanker Freight, Issue 25-144, 24 Jul 2025</td></tr>
+    <tr><td>Starting card U038</td><td>Upstage Studio Use Case Explorer — studio-usecase-explorer.vercel.app</td></tr>
+  </table>
+  <p class="small" style="margin-top:12px">Not found, so not claimed: how often claims are time-barred, how long a manual review takes, any Aramco-internal procedure.</p>
+  <div class="foot"><span>Full list with URLs: docs/brief.md</span><span>9</span></div>
+</section>
+
+</body>
+</html>

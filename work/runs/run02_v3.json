@@ -1,0 +1,114 @@
+[
+ {
+  "case_id": "A",
+  "config": 3,
+  "output": {
+   "claim_no": "DMG-2026-0410",
+   "vessel_name": "MT HANBIT PIONEER",
+   "decision": "지급 검토 가능",
+   "missing_documents": []
+  },
+  "note": "claim_no, vessel_name, decision, missing_documents는 Studio 모아보기 화면에서 읽은 값. reason은 문장이라 여기 옮기지 않음"
+ },
+ {
+  "case_id": "B",
+  "config": 3,
+  "output": {
+   "claim_no": "DMG-2026-0417",
+   "vessel_name": "MT SEORAK SPIRIT",
+   "decision": "보완 요청",
+   "missing_documents": []
+  },
+  "note": "claim_no, vessel_name, decision, missing_documents는 Studio 모아보기 화면에서 읽은 값. reason은 문장이라 여기 옮기지 않음"
+ },
+ {
+  "case_id": "C",
+  "config": 3,
+  "output": {
+   "claim_no": "DMG-2026-0424",
+   "vessel_name": "MT JIRISAN GLORY",
+   "decision": "기한 위험",
+   "missing_documents": []
+  },
+  "note": "claim_no, vessel_name, decision, missing_documents는 Studio 모아보기 화면에서 읽은 값. reason은 문장이라 여기 옮기지 않음"
+ },
+ {
+  "case_id": "D",
+  "config": 3,
+  "output": {
+   "claim_no": "DMG-2026-0431",
+   "vessel_name": "MT BAEKDU VENTURE",
+   "decision": "지급 검토 가능",
+   "missing_documents": []
+  },
+  "note": "claim_no, vessel_name, decision, missing_documents는 Studio 모아보기 화면에서 읽은 값. reason은 문장이라 여기 옮기지 않음"
+ },
+ {
+  "case_id": "E",
+  "config": 3,
+  "output": {
+   "claim_no": "DMG-2026-0438",
+   "vessel_name": "MT HALLA CREST",
+   "decision": "보완 요청",
+   "missing_documents": [
+    "Notice of Readiness"
+   ]
+  },
+  "note": "claim_no, vessel_name, decision, missing_documents는 Studio 모아보기 화면에서 읽은 값. reason은 문장이라 여기 옮기지 않음"
+ },
+ {
+  "case_id": "F",
+  "config": 3,
+  "output": {
+   "claim_no": "DMG-2026-0445",
+   "vessel_name": "MT DOKDO TRADER",
+   "decision": "검토 필요",
+   "missing_documents": []
+  },
+  "note": "claim_no, vessel_name, decision, missing_documents는 Studio 모아보기 화면에서 읽은 값. reason은 문장이라 여기 옮기지 않음"
+ },
+ {
+  "case_id": "G",
+  "config": 3,
+  "output": {
+   "claim_no": "DMG-2026-0452",
+   "vessel_name": "MT GEUMGANG STAR",
+   "decision": "검토 필요",
+   "missing_documents": []
+  },
+  "note": "claim_no, vessel_name, decision, missing_documents는 Studio 모아보기 화면에서 읽은 값. reason은 문장이라 여기 옮기지 않음"
+ },
+ {
+  "case_id": "H",
+  "config": 3,
+  "output": {
+   "claim_no": "DMG-2026-0459",
+   "vessel_name": "MT NAKDONG BREEZE",
+   "decision": "검토 필요",
+   "missing_documents": []
+  },
+  "note": "claim_no, vessel_name, decision, missing_documents는 Studio 모아보기 화면에서 읽은 값. reason은 문장이라 여기 옮기지 않음"
+ },
+ {
+  "case_id": "I",
+  "config": 3,
+  "output": {
+   "claim_no": "DMG-2026-0466",
+   "vessel_name": "MT TAEBAEK HORIZON",
+   "decision": "검토 필요",
+   "missing_documents": []
+  },
+  "note": "claim_no, vessel_name, decision, missing_documents는 Studio 모아보기 화면에서 읽은 값. reason은 문장이라 여기 옮기지 않음"
+ },
+ {
+  "case_id": "J",
+  "config": 3,
+  "output": {
+   "claim_no": "DMG-2026-0473",
+   "vessel_name": "MT ULLEUNG PEARL",
+   "decision": "지급 검토 가능",
+   "missing_documents": []
+  },
+  "note": "claim_no, vessel_name, decision, missing_documents는 Studio 모아보기 화면에서 읽은 값. reason은 문장이라 여기 옮기지 않음"
+ }
+]

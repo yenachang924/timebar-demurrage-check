@@ -1,0 +1,124 @@
+[
+ {
+  "case_id": "A",
+  "config": 4,
+  "job_id": "job_XrpahXHqzyRUVAewT8FLmi",
+  "output": {
+   "claim_no": "DMG-2026-0410",
+   "vessel_name": "MT HANBIT PIONEER",
+   "decision": "지급 검토 가능",
+   "missing_documents": []
+  },
+  "note": "2026-11-26 10건 한 번에 실행. Studio 실행 기록의 판정 노드 화면에서 읽은 값. reason은 문장이라 옮기지 않음"
+ },
+ {
+  "case_id": "B",
+  "config": 4,
+  "job_id": "job_RgmJjeZpZvjjJEYt4z44Xk",
+  "output": {
+   "claim_no": "DMG-2026-0417",
+   "vessel_name": "MT SEORAK SPIRIT",
+   "decision": "보완 요청",
+   "missing_documents": []
+  },
+  "note": "2026-11-26 10건 한 번에 실행. Studio 실행 기록의 판정 노드 화면에서 읽은 값. reason은 문장이라 옮기지 않음"
+ },
+ {
+  "case_id": "C",
+  "config": 4,
+  "job_id": "job_D9EiYjebN63vV42BjYMsCB",
+  "output": {
+   "claim_no": "DMG-2026-0424",
+   "vessel_name": "MT JIRISAN GLORY",
+   "decision": "기한 위험",
+   "missing_documents": []
+  },
+  "note": "2026-11-26 10건 한 번에 실행. Studio 실행 기록의 판정 노드 화면에서 읽은 값. reason은 문장이라 옮기지 않음"
+ },
+ {
+  "case_id": "D",
+  "config": 4,
+  "job_id": "job_L3AinD3qbpAFoXSb3VsCjj",
+  "output": {
+   "claim_no": "DMG-2026-0431",
+   "vessel_name": "MT BAEKDU VENTURE",
+   "decision": "지급 검토 가능",
+   "missing_documents": []
+  },
+  "note": "2026-11-26 10건 한 번에 실행. Studio 실행 기록의 판정 노드 화면에서 읽은 값. reason은 문장이라 옮기지 않음"
+ },
+ {
+  "case_id": "E",
+  "config": 4,
+  "job_id": "job_bwgZyVjR5pv6sfU3sTC7EY",
+  "output": {
+   "claim_no": "DMG-2026-0438",
+   "vessel_name": "MT HALLA CREST",
+   "decision": "보완 요청",
+   "missing_documents": [
+    "Notice of Readiness"
+   ]
+  },
+  "note": "2026-11-26 10건 한 번에 실행. Studio 실행 기록의 판정 노드 화면에서 읽은 값. reason은 문장이라 옮기지 않음"
+ },
+ {
+  "case_id": "F",
+  "config": 4,
+  "job_id": "job_XF7JD3kMVoNZaq7npo3jzD",
+  "output": {
+   "claim_no": "DMG-2026-0445",
+   "vessel_name": "MT DOKDO TRADER",
+   "decision": "검토 필요",
+   "missing_documents": []
+  },
+  "note": "2026-11-26 10건 한 번에 실행. Studio 실행 기록의 판정 노드 화면에서 읽은 값. reason은 문장이라 옮기지 않음"
+ },
+ {
+  "case_id": "G",
+  "config": 4,
+  "job_id": "job_43WfDZUuP69icPhV58XCPw",
+  "output": {
+   "claim_no": "DMG-2026-0452",
+   "vessel_name": "MT GEUMGANG STAR",
+   "decision": "검토 필요",
+   "missing_documents": []
+  },
+  "note": "2026-11-26 10건 한 번에 실행. Studio 실행 기록의 판정 노드 화면에서 읽은 값. reason은 문장이라 옮기지 않음"
+ },
+ {
+  "case_id": "H",
+  "config": 4,
+  "job_id": "job_3d9dFp4zut3JR84tX9idmF",
+  "output": {
+   "claim_no": "DMG-2026-0459",
+   "vessel_name": "MT NAKDONG BREEZE",
+   "decision": "검토 필요",
+   "missing_documents": []
+  },
+  "note": "2026-11-26 10건 한 번에 실행. Studio 실행 기록의 판정 노드 화면에서 읽은 값. reason은 문장이라 옮기지 않음"
+ },
+ {
+  "case_id": "I",
+  "config": 4,
+  "job_id": "job_PofdmcQg9JitApLo6S98S2",
+  "output": {
+   "claim_no": "DMG-2026-0466",
+   "vessel_name": "MT TAEBAEK HORIZON",
+   "decision": "검토 필요",
+   "missing_documents": []
+  },
+  "note": "2026-11-26 10건 한 번에 실행. Studio 실행 기록의 판정 노드 화면에서 읽은 값. reason은 문장이라 옮기지 않음"
+ },
+ {
+  "case_id": "J",
+  "config": 4,
+  "job_id": "job_a2BippGMgfTtpCA7wVrrPW",
+  "output": {
+   "claim_no": "DMG-2026-0473",
+   "vessel_name": "MT ULLEUNG PEARL",
+   "decision": "지급 검토 가능",
+   "missing_documents": []
+  },
+  "note": "2026-11-26 10건 한 번에 실행. Studio 실행 기록의 판정 노드 화면에서 읽은 값. reason은 문장이라 옮기지 않음"
+ }
+]
