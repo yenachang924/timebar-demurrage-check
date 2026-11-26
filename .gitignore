@@ -36,3 +36,11 @@ work/probes_v2/html/
 
 # 교체 전 제출 파일 보관 (공개하지 않는다)
 work/backup/
+
+# 발표 준비 문서와 내부 안내 (공개하지 않는다)
+docs/pitch_script.md
+docs/pitch_ko.md
+docs/tech_talk_ko.md
+docs/booth_4min.md
+docs/mentoring_questions.md
+docs/01_활용가이드.md
