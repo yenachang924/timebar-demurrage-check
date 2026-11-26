@@ -20,3 +20,8 @@ work/pdf/
 
 # 내부용 진행 현황 (공개하지 않는다)
 docs/status.md
+
+# 주최 측 템플릿으로 만든 파일 (재배포 금지 문구가 있어 공개하지 않는다)
+submission/*설계서.pdf
+submission/*유형표.xlsx
+work/*설계서.docx

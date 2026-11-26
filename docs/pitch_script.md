@@ -21,9 +21,9 @@ In 2007, an English court threw out a claim of one hundred and fourteen thousand
 
 The rule behind these cases is simple and strict. Under the BPVOY4 charter party, the claim and all supporting documents must arrive within ninety days after discharge. If not, the charterer is released from liability.
 
-Notice who won. In all three cases the charterer checked the documents, found the gap, and owed nothing: five hundred and thirty-five thousand dollars in total. That check is the task I automate.
+Notice who relied on the rule. In all three cases the charterer pointed to the gap in the documents, and the demurrage claim was barred: five hundred and thirty-five thousand dollars claimed in total. That check is the task I automate.
 
-And an energy company sits on the charterer's side of this. Aramco exported six point three million barrels of crude a day in 2025. Its own terminal rules mention demurrage claims made against Saudi Aramco. It owns sixty-one point six percent of S-OIL, whose refinery in Korea processes six hundred and sixty-nine thousand barrels a day. So this is part of how an energy company moves its oil.
+Any company that receives crude by tanker can be on the charterer's side of this. Aramco exported six point three million barrels of crude a day in 2025. Its terminal rules provide for vessels making a demurrage claim against Saudi Aramco. It owns sixty-one point six percent of S-OIL, which refines six hundred and sixty-nine thousand barrels a day in Korea. So demurrage paperwork is part of moving oil, not only of shipping.
 
 ## Slide 3 — User and task (1:25–2:05)
 
@@ -47,7 +47,7 @@ There are four possible decisions, checked in a fixed order.
 
 First, review needed: something is unreadable, belongs to another vessel, or does not match. Second, time-bar risk: the claim arrived after the deadline. Third, request documents: something is missing or unsigned. And only if all checks pass: clear for payment review.
 
-The workflow never says "reject". Courts have ruled both ways on similar facts, so that call belongs to a person.
+The workflow never says "reject". The same time-bar defence has also failed in court, so that call belongs to a person.
 
 ## Slide 6 — Reliability (3:35–4:35)
 
@@ -55,7 +55,7 @@ Three design choices make this reliable.
 
 One. When a value is covered or blurred, the workflow does not fill it in. It says "review needed" and tells the handler where to look.
 
-Two. When the contract is silent, it does not assume. If the pumping log is unsigned but a protest is attached, BPVOY4 does not say the protest is enough. So the case goes to a person.
+Two. When the contract is silent, it does not assume. If the pumping log is unsigned but a protest is attached, the BPVOY4 clause does not say the protest is enough. So the case goes to a person.
 
 Three. The model does no arithmetic. The deadline date is read from the charterer's own receipt record and compared with the date received.
 
@@ -88,7 +88,7 @@ Thank you. I'm happy to take your questions.
 ## Q&A — 준비할 답 (초안)
 
 **Q. Isn't this a shipping problem, not an energy problem?**
-The documents are produced at the terminal during cargo operations: the notice of readiness, the statement of facts, the pumping log. Aramco's terminal rules themselves refer to demurrage claims against Saudi Aramco. An energy company that ships six million barrels a day handles these claims on both sides.
+The documents are produced at the terminal during cargo operations: the notice of readiness, the statement of facts, the pumping log. Aramco's terminal rules provide for demurrage claims against Saudi Aramco. I have not confirmed how Aramco handles such claims internally, and I say so rather than guess.
 
 **Q. Why not calculate the demurrage amount too?**
 In the cases I showed, the claims were not lost on the amount. They were lost on missing documents and deadlines. I chose the part where a mistake costs the whole claim, and where the answer can be checked against a clear rule.
