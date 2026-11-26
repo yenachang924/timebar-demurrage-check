@@ -1,6 +1,6 @@
 # Pitch script (English, 6 minutes) — draft v0
 
-- 목표 길이: 6분. 아래 원고는 약 800단어로, 분당 135단어 속도면 6분에 맞는다. 소리 내어 읽어 시간을 재고 줄인다.
+- 목표 길이: 6분. 2번과 7번 슬라이드에 내용을 더해 원고가 약 900단어가 됐다. 분당 135단어로는 6분 40초쯤이라 넘친다. 소리 내어 읽어 시간을 재고, 넘치면 4번(노드 설명)과 6번(세 번째 항목)을 줄인다.
 - 7·8번 슬라이드는 2026-11-25 Studio 실행 결과로 채웠다. 문서나 설정을 바꿔 다시 돌리면 숫자를 고친다.
 - 슬라이드 번호는 Figma Slides 파일 기준(1~9 발표, 10은 Q&A용 출처). 같은 원고가 각 슬라이드의 발표자 노트에 들어 있다.
 - 발음 메모: demurrage = 디-머-리지 /dɪˈmʌrɪdʒ/, laytime = 레이-타임, BPVOY4 = "B-P-voy four".
@@ -15,15 +15,13 @@ Every crude oil cargo ends with paperwork. When a tanker waits longer than agree
 
 ## Slide 2 — Problem (0:25–1:25)
 
-Here is why the evidence matters.
+Start with the industry. Aramco exported six point three million barrels of crude a day in 2025. When a tanker carrying that crude waits, someone pays. Bahri, the exclusive carrier of the crude Aramco sells on a delivered basis, earned four point seven billion riyals from the Aramco group last year, and its accounts say the charterer pays for delay beyond the agreed time.
 
-In 2007, an English court threw out a claim of one hundred and fourteen thousand dollars. The reason: the pumping log was not signed. In 2015, a claim of three hundred and sixty-four thousand dollars was lost because a port log and time sheets were not sent. In 2020, fifty-six thousand dollars, because two bills of lading were missing.
+That payment runs on paperwork, and the paperwork is a risk. Under the BPVOY4 charter party, the claim and all supporting documents must arrive within ninety days after discharge. If not, the charterer is released from liability.
 
-The rule behind these cases is simple and strict. Under the BPVOY4 charter party, the claim and all supporting documents must arrive within ninety days after discharge. If not, the charterer is released from liability.
+Courts enforce this. In 2007 a claim of one hundred and fourteen thousand dollars was barred over an unsigned pumping log. In 2015, three hundred and sixty-four thousand, over a port log and time sheets. In 2020, fifty-six thousand, over two bills of lading.
 
-Notice who relied on the rule. In all three cases the charterer pointed to the gap in the documents, and the demurrage claim was barred: five hundred and thirty-five thousand dollars claimed in total. That check is the task I automate.
-
-Any company that receives crude by tanker can be on the charterer's side of this. Aramco exported six point three million barrels of crude a day in 2025. Its terminal rules provide for vessels making a demurrage claim against Saudi Aramco. It owns sixty-one point six percent of S-OIL, which refines six hundred and sixty-nine thousand barrels a day in Korea. So demurrage paperwork is part of moving oil, not only of shipping.
+In each case it was the charterer who pointed to the gap. Today that check is done by people, document by document. That is the task I automate.
 
 ## Slide 3 — User and task (1:25–2:05)
 
@@ -67,7 +65,11 @@ Here is what happened when I ran it.
 
 On the first full run, nine of ten decisions were right. The one failure was the late claim. The workflow said "review needed" instead of "time-bar risk", because the extraction marked a clean but very dense pumping log as unreadable. I removed that flag from the pumping log and kept it only for covered or smudged boxes on the statement of facts.
 
-After that fix, all ten decisions matched the answer key, and they matched again when I ran the final document set twice from start to finish: twenty runs, twenty correct decisions. Each claim package takes about half a minute.
+After that fix, all ten decisions matched the answer key, and they matched again when I ran the final set twice from start to finish.
+
+Then I built thirteen packages the workflow had never seen: two documents missing at once, a late claim with a missing log, pages in reverse order. Thirty-three runs, thirty-three correct decisions.
+
+Those new cases also showed me one weakness. With no invoice in the bundle, the workflow invented a placeholder for the vessel name. The decision was still right, and I list it as an open issue. Each claim package takes about half a minute.
 
 ## Slide 8 — Service (5:10–5:45)
 
@@ -88,7 +90,7 @@ Thank you. I'm happy to take your questions.
 ## Q&A — 준비할 답 (초안)
 
 **Q. Isn't this a shipping problem, not an energy problem?**
-The documents are produced at the terminal during cargo operations: the notice of readiness, the statement of facts, the pumping log. Aramco's terminal rules provide for demurrage claims against Saudi Aramco. I have not confirmed how Aramco handles such claims internally, and I say so rather than guess.
+The documents are produced at the terminal during cargo operations: the notice of readiness, the statement of facts, the pumping log. Bahri's accounts show the Aramco group as its largest customer, and say the charterer pays for delay. The amounts Aramco paid are not disclosed, so that link is my inference, and I say so rather than guess.
 
 **Q. Why not calculate the demurrage amount too?**
 In the cases I showed, the claims were not lost on the amount. They were lost on missing documents and deadlines. I chose the part where a mistake costs the whole claim, and where the answer can be checked against a clear rule.

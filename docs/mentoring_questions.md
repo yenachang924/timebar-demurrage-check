@@ -15,7 +15,15 @@ We verify tanker demurrage claim packages (invoice, NOR, statement of facts, pum
 
 1. **[실제 업무와 맞는가]** Aramco 터미널 규정집(2025년판 §11.1.2)에 "Saudi Aramco에 대한 체선료 청구"가 언급되어 있어 이 업무를 골랐습니다. 다만 Aramco나 정유사 안에서 이 청구를 누가, 어떤 서류로 검토하는지는 공개 자료로 확인하지 못했습니다. 실제로도 청구서, 도착 통지서, 시간 기록, 펌핑 기록 묶음으로 들어오나요? 제가 틀리게 가정한 부분이 있다면 알려 주세요.
    I chose this task because Aramco's Ports and Terminals Rules (2025, §11.1.2) refer to demurrage claims against Saudi Aramco. However, I could not confirm from public sources who reviews these claims inside Aramco or a refinery, or with which documents. Do claims really arrive as a bundle of invoice, NOR, statement of facts and pumping log? Please tell me if any of my assumptions are wrong.
-   - 답:
+   - 답 (2026-11-26 현장 멘토, 사용자 메모 그대로):
+     - 현업에 이런 업무를 담당하는 부서가 있다.
+     - 자동화를 도입하기 전까지 검증 과정이 필요하고 고도화가 필요하다. 사람이 하던 것과 맞는지, 오류가 없는지를 봐야 한다.
+     - 자동화되어 빨라지면 불필요한 절차가 사라지고, 병목을 풀고, 사람의 실수를 없애면서 빠르게 갈 수 있다.
+     - 발표 기조: 에너지 산업이 있고, 이 과정이 위험이 될 수 있다. 이 과정에서 생기는 위험에 따른 효율 감소를 먼저 밝히고 들어가면 의의가 선다. 에너지 → 판례 순서.
+     - 에너지 산업과의 연계는 약점이지만 강점일 수도 있다. 문제 정의를 앞쪽에서 들고 들어가면 좋다.
+     - 전체적으로 좋다는 피드백.
+   - 반영: 2번 슬라이드 원고를 산업 → 위험 → 판례 순서로 바꿈. Aramco 접점 근거를 Bahri 공시로 바꿈.
+   - 아직 모르는 것: 멘토의 이름·소속을 발표에서 말해도 되는지, 어느 부서인지, 질문 2~4에 대한 답.
 
 2. **[가장 흔한 문제]** 현업에서 체선료 청구가 거절되거나 지연되는 가장 흔한 서류 문제는 무엇인가요? (서명 누락, 청구 기한 초과, 서류 간 시각 불일치 중)
    In practice, which document issue most often causes a demurrage claim to be rejected or delayed: missing signatures, a missed time bar, or time discrepancies between documents?
@@ -88,7 +96,7 @@ We verify tanker demurrage claim packages (invoice, NOR, statement of facts, pum
 
 2. 현업에서 체선료 청구가 거절되거나 지연되는 가장 흔한 서류 문제는 무엇인가요? (서명 누락, 청구 기한 초과, 서류 간 시각 불일치 중)
    In practice, which document issue most often causes a demurrage claim to be rejected or delayed: missing signatures, a missed time bar, or time discrepancies between documents?
-   - 답:
+   - 답: 
 
 3. 범위를 용선계약 양식 하나(BPVOY4)와 세 가지 확인(서류 완결성, 90일 청구 기한, 시각 일치)으로 좁혔고, 금액 검산은 사람에게 넘깁니다. 현업에서 의미 있는 범위일까요?
    We limited the scope to one charter party form (BPVOY4) and three checks (completeness, 90-day time bar, time consistency), leaving the amount calculation to the handler. Is this scope meaningful in practice?

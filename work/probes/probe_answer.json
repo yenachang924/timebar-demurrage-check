@@ -1,0 +1,245 @@
+[
+  {
+    "case_id": "P1",
+    "file": "probe_P1.pdf",
+    "documents": [
+      "Demurrage Claim Invoice",
+      "Claim Receipt Record",
+      "Notice of Readiness",
+      "Cargo Pumping Log"
+    ],
+    "answer": {
+      "claim_no": "DMG-2026-0550",
+      "vessel_name": "MT SOBAEK DAWN",
+      "decision": "보완 요청",
+      "reason": "필수 서류 누락: Statement of Facts. 기한 내 접수(접수일 2026-09-16, 기한일 2026-11-05)",
+      "missing_documents": [
+        "Statement of Facts"
+      ]
+    }
+  },
+  {
+    "case_id": "P2",
+    "file": "probe_P2.pdf",
+    "documents": [
+      "Demurrage Claim Invoice",
+      "Claim Receipt Record",
+      "Notice of Readiness",
+      "Statement of Facts"
+    ],
+    "answer": {
+      "claim_no": "DMG-2026-0557",
+      "vessel_name": "MT GAYA LANTERN",
+      "decision": "기한 위험",
+      "reason": "접수일이 기한일(양하 완료 후 90일)보다 늦음. 접수일 2026-10-29, 기한일 2026-10-24",
+      "missing_documents": [
+        "Cargo Pumping Log"
+      ]
+    }
+  },
+  {
+    "case_id": "P3",
+    "file": "probe_P3.pdf",
+    "documents": [
+      "Demurrage Claim Invoice",
+      "Claim Receipt Record",
+      "Notice of Readiness",
+      "Statement of Facts",
+      "Cargo Pumping Log"
+    ],
+    "answer": {
+      "claim_no": "DMG-2026-0564",
+      "vessel_name": "MT MUDEUNG HARBOR",
+      "decision": "기한 위험",
+      "reason": "접수일이 기한일(양하 완료 후 90일)보다 늦음. 접수일 2026-10-30, 기한일 2026-10-27",
+      "missing_documents": []
+    }
+  },
+  {
+    "case_id": "P4",
+    "file": "probe_P4.pdf",
+    "documents": [
+      "Demurrage Claim Invoice",
+      "Claim Receipt Record",
+      "Cargo Pumping Log"
+    ],
+    "answer": {
+      "claim_no": "DMG-2026-0571",
+      "vessel_name": "MT ODAE MERIDIAN",
+      "decision": "보완 요청",
+      "reason": "필수 서류 누락: Notice of Readiness, Statement of Facts. 기한 내 접수(접수일 2026-09-22, 기한일 2026-11-14)",
+      "missing_documents": [
+        "Notice of Readiness",
+        "Statement of Facts"
+      ]
+    }
+  },
+  {
+    "case_id": "P5",
+    "file": "probe_P5.pdf",
+    "documents": [
+      "Demurrage Claim Invoice",
+      "Claim Receipt Record",
+      "Notice of Readiness",
+      "Statement of Facts",
+      "Cargo Pumping Log"
+    ],
+    "answer": {
+      "claim_no": "DMG-2026-0578",
+      "vessel_name": "MT BUKHAN CURRENT",
+      "decision": "검토 필요",
+      "reason": "Notice of Readiness의 선박명·항차(MT BUKHAN CURRENT / BC-2699)가 청구서(MT BUKHAN CURRENT / BC-2705)와 다름",
+      "missing_documents": []
+    }
+  },
+  {
+    "case_id": "P6",
+    "file": "probe_P6.pdf",
+    "documents": [
+      "Demurrage Claim Invoice",
+      "Claim Receipt Record",
+      "Notice of Readiness",
+      "Statement of Facts",
+      "Cargo Pumping Log"
+    ],
+    "answer": {
+      "claim_no": "DMG-2026-0585",
+      "vessel_name": "MT WOLCHUL ANCHOR",
+      "decision": "검토 필요",
+      "reason": "청구서의 양하 완료 일시 2026-07-24 09:30와 Statement of Facts의 Hoses Disconnected 2026-07-24 06:30가 다름",
+      "missing_documents": []
+    }
+  },
+  {
+    "case_id": "P7",
+    "file": "probe_P7.pdf",
+    "documents": [
+      "Demurrage Claim Invoice",
+      "Claim Receipt Record",
+      "Notice of Readiness",
+      "Statement of Facts",
+      "Cargo Pumping Log"
+    ],
+    "answer": {
+      "claim_no": "DMG-2026-0592",
+      "vessel_name": "MT CHIAK LEDGER",
+      "decision": "지급 검토 가능",
+      "reason": "필수 서류 5종 완비, 터미널 서명 확인. 기한 내 접수(접수일 2026-09-24, 기한일 2026-11-24), 양하 완료 일시 2026-08-26 23:45 일치",
+      "missing_documents": []
+    }
+  },
+  {
+    "case_id": "P8",
+    "file": "probe_P8.pdf",
+    "documents": [
+      "Demurrage Claim Invoice",
+      "Claim Receipt Record",
+      "Notice of Readiness",
+      "Statement of Facts",
+      "Cargo Pumping Log",
+      "Letter of Protest"
+    ],
+    "answer": {
+      "claim_no": "DMG-2026-0599",
+      "vessel_name": "MT GYERYONG TIDE",
+      "decision": "검토 필요",
+      "reason": "Cargo Pumping Log에 터미널 서명이 없고 Letter of Protest가 첨부됨. 항의서가 서명을 대신하는지는 용선계약(BPVOY4)에 명시되어 있지 않아 담당자 판단이 필요함",
+      "missing_documents": []
+    }
+  },
+  {
+    "case_id": "Q1",
+    "file": "probe_Q1.pdf",
+    "documents": [
+      "Demurrage Claim Invoice",
+      "Notice of Readiness",
+      "Statement of Facts",
+      "Cargo Pumping Log"
+    ],
+    "answer": {
+      "claim_no": "DMG-2026-0606",
+      "vessel_name": "MT NAEJANG SIGNAL",
+      "decision": "보완 요청",
+      "reason": "필수 서류 누락: Claim Receipt Record. 기한 내 접수(접수일 2026-09-15, 기한일 2026-11-08)",
+      "missing_documents": [
+        "Claim Receipt Record"
+      ]
+    }
+  },
+  {
+    "case_id": "Q2",
+    "file": "probe_Q2.pdf",
+    "documents": [
+      "Claim Receipt Record",
+      "Notice of Readiness",
+      "Statement of Facts",
+      "Cargo Pumping Log"
+    ],
+    "answer": {
+      "claim_no": "DMG-2026-0613",
+      "vessel_name": "MT DEOGYU COMPASS",
+      "decision": "보완 요청",
+      "reason": "필수 서류 누락: Demurrage Claim Invoice. 기한 내 접수(접수일 2026-09-17, 기한일 2026-11-12)",
+      "missing_documents": [
+        "Demurrage Claim Invoice"
+      ]
+    }
+  },
+  {
+    "case_id": "Q3",
+    "file": "probe_Q3.pdf",
+    "documents": [
+      "Demurrage Claim Invoice",
+      "Claim Receipt Record",
+      "Notice of Readiness",
+      "Statement of Facts",
+      "Cargo Pumping Log",
+      "Statement of Facts"
+    ],
+    "answer": {
+      "claim_no": "DMG-2026-0620",
+      "vessel_name": "MT SONGNI BEACON",
+      "decision": "지급 검토 가능",
+      "reason": "필수 서류 5종 완비, 터미널 서명 확인. 기한 내 접수(접수일 2026-09-18, 기한일 2026-11-15), 양하 완료 일시 2026-08-17 11:35 일치",
+      "missing_documents": []
+    }
+  },
+  {
+    "case_id": "Q4",
+    "file": "probe_Q4.pdf",
+    "documents": [
+      "Demurrage Claim Invoice",
+      "Claim Receipt Record",
+      "Notice of Readiness",
+      "Statement of Facts",
+      "Letter of Protest"
+    ],
+    "answer": {
+      "claim_no": "DMG-2026-0627",
+      "vessel_name": "MT JUWANG KEEL",
+      "decision": "보완 요청",
+      "reason": "필수 서류 누락: Cargo Pumping Log. 기한 내 접수(접수일 2026-09-20, 기한일 2026-11-19)",
+      "missing_documents": [
+        "Cargo Pumping Log"
+      ]
+    }
+  },
+  {
+    "case_id": "Q5",
+    "file": "probe_Q5.pdf",
+    "documents": [
+      "Cargo Pumping Log",
+      "Statement of Facts",
+      "Notice of Readiness",
+      "Claim Receipt Record",
+      "Demurrage Claim Invoice"
+    ],
+    "answer": {
+      "claim_no": "DMG-2026-0634",
+      "vessel_name": "MT BYEONSAN RUDDER",
+      "decision": "지급 검토 가능",
+      "reason": "필수 서류 5종 완비, 터미널 서명 확인. 기한 내 접수(접수일 2026-09-21, 기한일 2026-11-22), 양하 완료 일시 2026-08-24 20:00 일치",
+      "missing_documents": []
+    }
+  }
+]

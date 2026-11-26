@@ -1,0 +1,104 @@
+[
+ {
+  "case_id": "Q1",
+  "file": "probe_Q1.pdf",
+  "config": 4,
+  "expected": {
+   "vessel_name": "MT NAEJANG SIGNAL",
+   "decision": "보완 요청",
+   "missing_documents": [
+    "Claim Receipt Record"
+   ]
+  },
+  "output": {
+   "claim_no": "DMG-2026-0606",
+   "vessel_name": "MT NAEJANG SIGNAL",
+   "decision": "보완 요청",
+   "missing_documents": [
+    "Claim Receipt Record"
+   ]
+  },
+  "decision_match": true,
+  "vessel_match": true
+ },
+ {
+  "case_id": "Q2",
+  "file": "probe_Q2.pdf",
+  "config": 4,
+  "expected": {
+   "vessel_name": "MT DEOGYU COMPASS",
+   "decision": "보완 요청",
+   "missing_documents": [
+    "Demurrage Claim Invoice"
+   ]
+  },
+  "output": {
+   "claim_no": "DMG-2026-0613",
+   "vessel_name": "정보 부족",
+   "decision": "보완 요청",
+   "missing_documents": [
+    "Demurrage Claim Invoice"
+   ]
+  },
+  "decision_match": true,
+  "vessel_match": false
+ },
+ {
+  "case_id": "Q3",
+  "file": "probe_Q3.pdf",
+  "config": 4,
+  "expected": {
+   "vessel_name": "MT SONGNI BEACON",
+   "decision": "지급 검토 가능",
+   "missing_documents": []
+  },
+  "output": {
+   "claim_no": "DMG-2026-0620",
+   "vessel_name": "MT SONGNI BEACON",
+   "decision": "지급 검토 가능",
+   "missing_documents": []
+  },
+  "decision_match": true,
+  "vessel_match": true
+ },
+ {
+  "case_id": "Q4",
+  "file": "probe_Q4.pdf",
+  "config": 4,
+  "expected": {
+   "vessel_name": "MT JUWANG KEEL",
+   "decision": "보완 요청",
+   "missing_documents": [
+    "Cargo Pumping Log"
+   ]
+  },
+  "output": {
+   "claim_no": "DMG-2026-0627",
+   "vessel_name": "MT JUWANG KEEL",
+   "decision": "보완 요청",
+   "missing_documents": [
+    "Cargo Pumping Log"
+   ]
+  },
+  "decision_match": true,
+  "vessel_match": true
+ },
+ {
+  "case_id": "Q5",
+  "file": "probe_Q5.pdf",
+  "config": 4,
+  "expected": {
+   "vessel_name": "MT BYEONSAN RUDDER",
+   "decision": "지급 검토 가능",
+   "missing_documents": []
+  },
+  "output": {
+   "claim_no": "DMG-2026-0634",
+   "vessel_name": "MT BYEONSAN RUDDER",
+   "decision": "지급 검토 가능",
+   "missing_documents": []
+  },
+  "decision_match": true,
+  "vessel_match": true
+ }
+]

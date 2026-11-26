@@ -1,0 +1,136 @@
+[
+ {
+  "case_id": "P1",
+  "file": "probe_P1.pdf",
+  "config": 4,
+  "expected": {
+   "decision": "보완 요청",
+   "missing_documents": [
+    "Statement of Facts"
+   ]
+  },
+  "output": {
+   "claim_no": "DMG-2026-0550",
+   "decision": "보완 요청",
+   "missing_documents": [
+    "Statement of Facts"
+   ]
+  },
+  "match": true
+ },
+ {
+  "case_id": "P2",
+  "file": "probe_P2.pdf",
+  "config": 4,
+  "expected": {
+   "decision": "기한 위험",
+   "missing_documents": [
+    "Cargo Pumping Log"
+   ]
+  },
+  "output": {
+   "claim_no": "DMG-2026-0557",
+   "decision": "기한 위험",
+   "missing_documents": [
+    "Cargo Pumping Log"
+   ]
+  },
+  "match": true
+ },
+ {
+  "case_id": "P3",
+  "file": "probe_P3.pdf",
+  "config": 4,
+  "expected": {
+   "decision": "기한 위험",
+   "missing_documents": []
+  },
+  "output": {
+   "claim_no": "DMG-2026-0564",
+   "decision": "기한 위험",
+   "missing_documents": []
+  },
+  "match": true
+ },
+ {
+  "case_id": "P4",
+  "file": "probe_P4.pdf",
+  "config": 4,
+  "expected": {
+   "decision": "보완 요청",
+   "missing_documents": [
+    "Notice of Readiness",
+    "Statement of Facts"
+   ]
+  },
+  "output": {
+   "claim_no": "DMG-2026-0571",
+   "decision": "보완 요청",
+   "missing_documents": [
+    "Notice of Readiness",
+    "Statement of Facts"
+   ]
+  },
+  "match": true
+ },
+ {
+  "case_id": "P5",
+  "file": "probe_P5.pdf",
+  "config": 4,
+  "expected": {
+   "decision": "검토 필요",
+   "missing_documents": []
+  },
+  "output": {
+   "claim_no": "DMG-2026-0578",
+   "decision": "검토 필요",
+   "missing_documents": []
+  },
+  "match": true
+ },
+ {
+  "case_id": "P6",
+  "file": "probe_P6.pdf",
+  "config": 4,
+  "expected": {
+   "decision": "검토 필요",
+   "missing_documents": []
+  },
+  "output": {
+   "claim_no": "DMG-2026-0585",
+   "decision": "검토 필요",
+   "missing_documents": []
+  },
+  "match": true
+ },
+ {
+  "case_id": "P7",
+  "file": "probe_P7.pdf",
+  "config": 4,
+  "expected": {
+   "decision": "지급 검토 가능",
+   "missing_documents": []
+  },
+  "output": {
+   "claim_no": "DMG-2026-0592",
+   "decision": "지급 검토 가능",
+   "missing_documents": []
+  },
+  "match": true
+ },
+ {
+  "case_id": "P8",
+  "file": "probe_P8.pdf",
+  "config": 4,
+  "expected": {
+   "decision": "검토 필요",
+   "missing_documents": []
+  },
+  "output": {
+   "claim_no": "DMG-2026-0599",
+   "decision": "검토 필요",
+   "missing_documents": []
+  },
+  "match": true
+ }
+]
