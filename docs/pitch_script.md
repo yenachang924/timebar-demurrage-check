@@ -21,7 +21,9 @@ In 2007, an English court threw out a claim of one hundred and fourteen thousand
 
 The rule behind these cases is simple and strict. Under the BPVOY4 charter party, the claim and all supporting documents must arrive within ninety days after discharge. If not, the charterer is released from liability.
 
-And the scale is large. Aramco exported six point three million barrels of crude a day in 2025. One day of delay for a very large tanker was priced at about forty-five thousand dollars last year. Aramco's own terminal rules mention demurrage claims made against Saudi Aramco. So this is not only a shipping problem. It is part of how an energy company moves its oil.
+Notice who won. In all three cases the charterer checked the documents, found the gap, and owed nothing: five hundred and thirty-five thousand dollars in total. That check is the task I automate.
+
+And an energy company sits on the charterer's side of this. Aramco exported six point three million barrels of crude a day in 2025. Its own terminal rules mention demurrage claims made against Saudi Aramco. It owns sixty-one point six percent of S-OIL, whose refinery in Korea processes six hundred and sixty-nine thousand barrels a day. So this is part of how an energy company moves its oil.
 
 ## Slide 3 — User and task (1:25–2:05)
 
@@ -65,7 +67,7 @@ Here is what happened when I ran it.
 
 On the first full run, nine of ten decisions were right. The one failure was the late claim. The workflow said "review needed" instead of "time-bar risk", because the extraction marked a clean but very dense pumping log as unreadable. I removed that flag from the pumping log and kept it only for covered or smudged boxes on the statement of facts.
 
-After that fix, all ten decisions matched the answer key, and they matched again in one full run of the final document set. Each claim package takes about half a minute.
+After that fix, all ten decisions matched the answer key, and they matched again when I ran the final document set twice from start to finish: twenty runs, twenty correct decisions. Each claim package takes about half a minute.
 
 ## Slide 8 — Service (5:10–5:45)
 

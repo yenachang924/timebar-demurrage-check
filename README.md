@@ -29,7 +29,7 @@ Parse (OCR) → Classify (6종 + Other) → Extract × 6 → Merge → Instruct 
 ## 결과
 
 - 테스트 데이터: 가상 청구 10건, 서류 51개 (단순 28, 여러 양식 8, 예외 10, 저품질 6). 모든 문서는 가상이며 실제 회사·선박과 무관합니다.
-- 2026-11-26 Studio 설정 #4로 10건을 한 번에 실행: `decision`과 `missing_documents`가 10건 모두 정답지와 일치 (`work/runs/run03_v4_full.json`). `reason` 문장은 대조하지 않았습니다.
+- 2026-11-26 Studio 설정 #4로 10건 전체를 두 번 실행: 두 번 모두 `decision`과 `missing_documents`가 10건 모두 정답지와 일치 (`work/runs/run03_v4_full.json`, `run04_v4_repeat.json`). `reason` 문장은 대조하지 않았습니다.
 - 처음 전체 실행에서는 9/10이었습니다. 실패 원인과 수정은 `docs/decisions.md`에 있습니다.
 
 ## 폴더
@@ -39,7 +39,7 @@ Parse (OCR) → Classify (6종 + Other) → Extract × 6 → Merge → Instruct 
 | `submission/` | 제출물: 데이터셋 PDF 10개, 정답지, 유형표, 설계서, 워크플로 설정 JSON, 발표 자료, 데모 영상 |
 | `work/gen/` | 테스트 문서·정답지·유형표·설계서·워크플로 설정·데모 영상을 만드는 코드 |
 | `tools/` | 제출물 정합성 검사, 실행 결과 채점, PDF 도구 |
-| `docs/` | 주제 브리프(출처 URL 포함), 결정 기록, 멘토링 질문, 영어 발표 원고 |
+| `docs/` | 주제 브리프(출처 URL 포함), 결정 기록, 멘토링 질문, 발표 원고(영어·한국어) |
 | `.claude/` | 작업에 쓴 Claude Code 서브에이전트와 명령 |
 
 ## 다시 만들기

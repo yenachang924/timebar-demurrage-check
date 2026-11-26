@@ -1,0 +1,124 @@
+[
+ {
+  "case_id": "A",
+  "config": 4,
+  "job_id": "job_hoYM42Z9ZDhgFsQqDnQEhG",
+  "output": {
+   "claim_no": "DMG-2026-0410",
+   "vessel_name": "MT HANBIT PIONEER",
+   "decision": "지급 검토 가능",
+   "missing_documents": []
+  },
+  "note": "2026-11-26 두 번째 전체 실행. vessel_name은 직전 실행과 같은 문서라 claim_no로 확인했고 화면에서 따로 읽지 않음"
+ },
+ {
+  "case_id": "B",
+  "config": 4,
+  "job_id": "job_mfrFqdrDexoQ4yqmZYFMpt",
+  "output": {
+   "claim_no": "DMG-2026-0417",
+   "vessel_name": "MT SEORAK SPIRIT",
+   "decision": "보완 요청",
+   "missing_documents": []
+  },
+  "note": "2026-11-26 두 번째 전체 실행. vessel_name은 직전 실행과 같은 문서라 claim_no로 확인했고 화면에서 따로 읽지 않음"
+ },
+ {
+  "case_id": "C",
+  "config": 4,
+  "job_id": "job_MmkhJ8BvBna7GdvaqT3FBU",
+  "output": {
+   "claim_no": "DMG-2026-0424",
+   "vessel_name": "MT JIRISAN GLORY",
+   "decision": "기한 위험",
+   "missing_documents": []
+  },
+  "note": "2026-11-26 두 번째 전체 실행. vessel_name은 직전 실행과 같은 문서라 claim_no로 확인했고 화면에서 따로 읽지 않음"
+ },
+ {
+  "case_id": "D",
+  "config": 4,
+  "job_id": "job_M4gYHiYb9VAavjeNkcC4BX",
+  "output": {
+   "claim_no": "DMG-2026-0431",
+   "vessel_name": "MT BAEKDU VENTURE",
+   "decision": "지급 검토 가능",
+   "missing_documents": []
+  },
+  "note": "2026-11-26 두 번째 전체 실행. vessel_name은 직전 실행과 같은 문서라 claim_no로 확인했고 화면에서 따로 읽지 않음"
+ },
+ {
+  "case_id": "E",
+  "config": 4,
+  "job_id": "job_h7DLijkJzepVzfFeNvBEYd",
+  "output": {
+   "claim_no": "DMG-2026-0438",
+   "vessel_name": "MT HALLA CREST",
+   "decision": "보완 요청",
+   "missing_documents": [
+    "Notice of Readiness"
+   ]
+  },
+  "note": "2026-11-26 두 번째 전체 실행. vessel_name은 직전 실행과 같은 문서라 claim_no로 확인했고 화면에서 따로 읽지 않음"
+ },
+ {
+  "case_id": "F",
+  "config": 4,
+  "job_id": "job_hD7YPX9rCDutzwYHbj9jbk",
+  "output": {
+   "claim_no": "DMG-2026-0445",
+   "vessel_name": "MT DOKDO TRADER",
+   "decision": "검토 필요",
+   "missing_documents": []
+  },
+  "note": "2026-11-26 두 번째 전체 실행. vessel_name은 직전 실행과 같은 문서라 claim_no로 확인했고 화면에서 따로 읽지 않음"
+ },
+ {
+  "case_id": "G",
+  "config": 4,
+  "job_id": "job_6WnAXmeit5JZ8bvs7FF4t6",
+  "output": {
+   "claim_no": "DMG-2026-0452",
+   "vessel_name": "MT GEUMGANG STAR",
+   "decision": "검토 필요",
+   "missing_documents": []
+  },
+  "note": "2026-11-26 두 번째 전체 실행. vessel_name은 직전 실행과 같은 문서라 claim_no로 확인했고 화면에서 따로 읽지 않음"
+ },
+ {
+  "case_id": "H",
+  "config": 4,
+  "job_id": "job_7xYRQRmFnvjTnau4cnkVdA",
+  "output": {
+   "claim_no": "DMG-2026-0459",
+   "vessel_name": "MT NAKDONG BREEZE",
+   "decision": "검토 필요",
+   "missing_documents": []
+  },
+  "note": "2026-11-26 두 번째 전체 실행. vessel_name은 직전 실행과 같은 문서라 claim_no로 확인했고 화면에서 따로 읽지 않음"
+ },
+ {
+  "case_id": "I",
+  "config": 4,
+  "job_id": "job_jVmDpW9nLp9UwkGRtnccYN",
+  "output": {
+   "claim_no": "DMG-2026-0466",
+   "vessel_name": "MT TAEBAEK HORIZON",
+   "decision": "검토 필요",
+   "missing_documents": []
+  },
+  "note": "2026-11-26 두 번째 전체 실행. vessel_name은 직전 실행과 같은 문서라 claim_no로 확인했고 화면에서 따로 읽지 않음"
+ },
+ {
+  "case_id": "J",
+  "config": 4,
+  "job_id": "job_9Wg46osnhtFHHNCDBpSPgb",
+  "output": {
+   "claim_no": "DMG-2026-0473",
+   "vessel_name": "MT ULLEUNG PEARL",
+   "decision": "지급 검토 가능",
+   "missing_documents": []
+  },
+  "note": "2026-11-26 두 번째 전체 실행. vessel_name은 직전 실행과 같은 문서라 claim_no로 확인했고 화면에서 따로 읽지 않음"
+ }
+]
