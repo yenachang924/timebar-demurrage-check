@@ -6,6 +6,11 @@
 
 An Upstage Studio workflow that checks the evidence behind a tanker demurrage claim for the charterer's claims handler: completeness, signatures, the 90-day time bar (BPVOY4 cl. 20.1) and time consistency. It returns one of four decisions and drafts the next document.
 
+## 링크
+
+- Studio 라이브러리 (승인 대기 중에는 404가 정상): https://studio.upstage.ai/library/agt_oUANWimsxumaoLSmTyisbb
+- 데모 영상: `submission/TimeBar_최종제출_데모영상.mp4`
+
 ## 워크플로
 
 ```
