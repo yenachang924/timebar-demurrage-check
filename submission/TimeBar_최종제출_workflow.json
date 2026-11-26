@@ -1,12 +1,12 @@
 {
   "kind": "studio.workflow-config-draft",
   "schemaVersion": 4,
-  "exportedAt": "2026-11-25T14:42:19.038Z",
+  "exportedAt": "2026-11-26T05:57:20.530Z",
   "exportedFrom": {
     "workflowId": "agt_PwGSpcwWfFRCqXPfkjCpX8",
     "workflowName": "TimeBar_최종제출_유조선 체선료 청구 서류 검증",
-    "configId": "cfg_5FJrLLGHwkfHVzPrgTe4RF",
-    "configVer": 4
+    "configId": "cfg_Vp8K6HEadjCkiraajKe2AK",
+    "configVer": 7
   },
   "workflowConfig": {
     "workflow_name": "TimeBar_최종제출_유조선 체선료 청구 서류 검증",
@@ -29,6 +29,7 @@
       "customName": "청구서류-파싱"
     },
     "documentClassifyConfiguration": {
+      "modelName": "",
       "schema": {
         "type": "json_schema",
         "json_schema": {
@@ -68,15 +69,14 @@
           }
         }
       },
-      "modelName": "",
+      "customName": "청구서류-분류",
       "split": true,
       "splitCriteria": [
         {
           "criterion": "CONTINUITY",
           "description": ""
         }
-      ],
-      "customName": "청구서류-분류"
+      ]
     },
     "informationExtractConfiguration": {
       "modelName": "",
@@ -115,6 +115,8 @@
               }
             }
           },
+          "mode": "standard",
+          "modelName": "",
           "schemaLayout": {
             "version": 1,
             "columns": [
@@ -144,9 +146,6 @@
               }
             ]
           },
-          "mode": "standard",
-          "modelName": "",
-          "nodeMode": "extract",
           "userSystemPrompt": "[문서 경계] 입력 파일은 청구 1건의 서류 여러 종류가 한 PDF로 이어 붙은 묶음이며 앞 단계에서 문서 단위로 분리된다. 다른 문서에 속한 값을 이 문서의 값으로 가져오지 않는다. 영문 문서이며 값은 영문 표기 그대로 읽는다."
         },
         {
@@ -175,6 +174,8 @@
               }
             }
           },
+          "mode": "standard",
+          "modelName": "",
           "schemaLayout": {
             "version": 1,
             "columns": [
@@ -196,9 +197,6 @@
               }
             ]
           },
-          "mode": "standard",
-          "modelName": "",
-          "nodeMode": "extract",
           "userSystemPrompt": "[문서 경계] 입력 파일은 청구 1건의 서류 여러 종류가 한 PDF로 이어 붙은 묶음이며 앞 단계에서 문서 단위로 분리된다. 다른 문서에 속한 값을 이 문서의 값으로 가져오지 않는다. 영문 문서이며 값은 영문 표기 그대로 읽는다."
         },
         {
@@ -231,6 +229,8 @@
               }
             }
           },
+          "mode": "standard",
+          "modelName": "",
           "schemaLayout": {
             "version": 1,
             "columns": [
@@ -256,9 +256,6 @@
               }
             ]
           },
-          "mode": "standard",
-          "modelName": "",
-          "nodeMode": "extract",
           "userSystemPrompt": "[문서 경계] 입력 파일은 청구 1건의 서류 여러 종류가 한 PDF로 이어 붙은 묶음이며 앞 단계에서 문서 단위로 분리된다. 다른 문서에 속한 값을 이 문서의 값으로 가져오지 않는다. 영문 문서이며 값은 영문 표기 그대로 읽는다."
         },
         {
@@ -295,6 +292,8 @@
               }
             }
           },
+          "mode": "standard",
+          "modelName": "",
           "schemaLayout": {
             "version": 1,
             "columns": [
@@ -324,9 +323,6 @@
               }
             ]
           },
-          "mode": "standard",
-          "modelName": "",
-          "nodeMode": "extract",
           "userSystemPrompt": "[문서 경계] 입력 파일은 청구 1건의 서류 여러 종류가 한 PDF로 이어 붙은 묶음이며 앞 단계에서 문서 단위로 분리된다. 다른 문서에 속한 값을 이 문서의 값으로 가져오지 않는다. 영문 문서이며 값은 영문 표기 그대로 읽는다."
         },
         {
@@ -355,6 +351,8 @@
               }
             }
           },
+          "mode": "standard",
+          "modelName": "",
           "schemaLayout": {
             "version": 1,
             "columns": [
@@ -376,9 +374,6 @@
               }
             ]
           },
-          "mode": "standard",
-          "modelName": "",
-          "nodeMode": "extract",
           "userSystemPrompt": "[문서 경계] 입력 파일은 청구 1건의 서류 여러 종류가 한 PDF로 이어 붙은 묶음이며 앞 단계에서 문서 단위로 분리된다. 다른 문서에 속한 값을 이 문서의 값으로 가져오지 않는다. 영문 문서이며 값은 영문 표기 그대로 읽는다."
         },
         {
@@ -403,6 +398,8 @@
               }
             }
           },
+          "mode": "standard",
+          "modelName": "",
           "schemaLayout": {
             "version": 1,
             "columns": [
@@ -420,9 +417,6 @@
               }
             ]
           },
-          "mode": "standard",
-          "modelName": "",
-          "nodeMode": "extract",
           "userSystemPrompt": "[문서 경계] 입력 파일은 청구 1건의 서류 여러 종류가 한 PDF로 이어 붙은 묶음이며 앞 단계에서 문서 단위로 분리된다. 다른 문서에 속한 값을 이 문서의 값으로 가져오지 않는다. 영문 문서이며 값은 영문 표기 그대로 읽는다."
         }
       ],
@@ -433,15 +427,19 @@
         "sof": "시간기록_추출",
         "pumping_log": "펌핑기록_추출",
         "lop": "항의서_추출"
-      },
-      "confidenceThreshold": 0.9676
+      }
     },
     "instructConfiguration": {
       "nodes": [
         {
+          "name": "미분류_안내",
+          "modelName": "",
+          "prompt": "이 문서는 체선료 청구 검증용 6종(청구서·접수 기록·도착 통지서·항만 시간 기록·펌핑 기록·항의서)에 해당하지 않아 분류되지 않았다. 문서에 없는 값은 절대 생성하지 마라.\n한 줄로 작성하라: likely_document_type=<문서가 무엇으로 보이는지>, review_reason=<왜 분류되지 않았는지>, operator_action=<담당자가 할 일: 무시 / 선주에게 올바른 서류 요청 / 수동 확인>."
+        },
+        {
           "name": "청구_판정",
           "modelName": "",
-          "prompt": "당신은 화주사(Charterers) 체선료 정산 담당자의 서류 검증 보조자다. 앞 단계에서 추출된 청구서·접수 기록·도착 통지서·항만 시간 기록·펌핑 기록·항의서 결과만 사용해, 선주가 보낸 체선료 청구 건을 지급 검토로 넘겨도 되는지 1차 판정하라.\n문서에 없는 값은 절대 생성하지 마라. 확신이 없으면 단정하지 말고 '검토 필요'로 표기하라. 본 결과는 1차 스크리닝이며 지급·거절의 최종 판단은 정산 담당자가 한다. 청구 금액이 맞는지는 판정하지 않는다.\n\n[입력 형태] 입력은 청구 1건의 서류 여러 종류가 하나의 PDF로 이어 붙은 묶음이다. 특정 문서 종류의 추출 결과가 비어 있다면 그 문서가 제출되지 않았거나 분류·분할이 실패한 것이다. 어느 쪽인지 단정하지 말고 해당 서류를 '누락'으로 기록하라.\n\n[기준 정보] 청구 건의 식별 키는 청구서의 청구 번호(claim_no)와 선박명(vessel_name)이다. 같은 청구 건의 서류인지는 선박명과 항차 번호(voyage_no)로 확인한다.\n\n[판정 기준 — 용선계약 BPVOY4]\n1) 청구 기한: 접수 기록의 접수일(received_date)이 기한일(time_bar_date)과 같거나 그보다 앞서야 한다. 기한일은 양하 완료(호스 분리) 후 90일이며 접수 기록에 적힌 값을 그대로 쓴다. 날짜를 직접 계산하지 않는다. 접수일이 기한일과 같은 날이면 충족이다.\n2) 필수 서류 5종: Demurrage Claim Invoice, Claim Receipt Record, Notice of Readiness, Statement of Facts, Cargo Pumping Log가 모두 있어야 한다.\n3) 터미널 서명: Cargo Pumping Log의 terminal_signed가 true여야 한다. false인데 Letter of Protest가 첨부된 경우, 항의서가 서명을 대신하는지는 용선계약에 명시되어 있지 않으므로 통과로 보지 않고 담당자에게 넘긴다.\n4) 시각 일치: 청구서의 completion_of_discharge가 Statement of Facts의 hoses_disconnected_time과 같아야 한다.\n5) 동일 청구 건: 서류들의 선박명과 항차 번호가 청구서와 같아야 한다.\n\n[판정 순서 — 반드시 이 순서로]\n- 1단계 '검토 필요': 선박명 또는 항차 번호가 청구서와 다른 서류가 있음 / 기준 4)의 두 일시가 다름 / Statement of Facts의 readability가 'unclear'임 / 있는 서류인데 판정에 필요한 날짜·일시가 빈 문자열임 / 펌핑 기록의 terminal_signed가 false인데 Letter of Protest가 첨부되어 있음. 하나라도 해당하면 '검토 필요'로 판정하고 더 진행하지 않는다.\n- 2단계 '기한 위험': 접수일이 기한일보다 늦음.\n- 3단계 '보완 요청': 필수 서류 5종 중 하나라도 누락 / 펌핑 기록에 터미널 서명이 없고 항의서도 없음.\n- 4단계 '지급 검토 가능': 기준 1)~5)를 모두 충족.\n거절 사유를 추측으로 만들지 마라.\n\n[출력] 아래 키 다섯 개를 이 순서로, 한 줄에 하나씩 작성하라. 값은 추출 결과에서 가져온다.\nclaim_no: <청구서의 청구 번호>\nvessel_name: <청구서의 선박명>\ndecision: <지급 검토 가능 | 보완 요청 | 기한 위험 | 검토 필요 중 하나>\nreason: <판정 근거 1~2문장, 한국어. 판정을 정한 기준과 실제 값(접수일·기한일·일시·서류 이름)만 적는다. reason 줄은 한 번만 쓰고 줄을 나누지 않는다. terminal_signed 같은 내부 항목 이름은 쓰지 않고 \"터미널 서명 없음\"처럼 풀어 쓴다>\nmissing_documents: <누락된 필수 서류의 영문 이름을 JSON 배열로. 이름은 Demurrage Claim Invoice / Claim Receipt Record / Notice of Readiness / Statement of Facts / Cargo Pumping Log 중에서 글자 그대로 쓰고 큰따옴표로 감싼다. 예: [\"Notice of Readiness\"]. 누락이 없으면 [] 만 쓴다. 서명 없음은 누락이 아니므로 여기에 적지 않는다>\n마지막 줄에 decision 값만 한 번 더 적어라.",
+          "prompt": "당신은 화주사(Charterers) 체선료 정산 담당자의 서류 검증 보조자다. 앞 단계에서 추출된 청구서·접수 기록·도착 통지서·항만 시간 기록·펌핑 기록·항의서 결과만 사용해, 선주가 보낸 체선료 청구 건을 지급 검토로 넘겨도 되는지 1차 판정하라.\n문서에 없는 값은 절대 생성하지 마라. 확신이 없으면 단정하지 말고 '검토 필요'로 표기하라. 본 결과는 1차 스크리닝이며 지급·거절의 최종 판단은 정산 담당자가 한다. 청구 금액이 맞는지는 판정하지 않는다.\n\n[입력 형태] 입력은 청구 1건의 서류 여러 종류가 하나의 PDF로 이어 붙은 묶음이다. 특정 문서 종류의 추출 결과가 비어 있다면 그 문서가 제출되지 않았거나 분류·분할이 실패한 것이다. 어느 쪽인지 단정하지 말고 해당 서류를 '누락'으로 기록하라.\n같은 종류의 서류가 두 건 이상 추출되면 모두 본다. 판정에 쓰는 값(선박명, 항차 번호, 청구 번호, 날짜·일시, 터미널 서명, readability)이 서로 같으면 한 건으로 취급한다. 하나라도 다르면 어느 쪽이 정정본이나 최신본인지 추측해 고르지 말고 1단계 '검토 필요'로 넘긴다.\n'서류가 없음'과 '서류는 있는데 값이 빈 문자열임'은 다르다. 없는 서류는 missing_documents에 적고, 그 서류의 값이 필요한 비교는 하지 않는다. 있는 서류의 필요한 값이 비어 있으면 누락이 아니라 1단계 '검토 필요'다.\n\n[기준 정보] 청구 건의 식별 키는 청구서의 청구 번호(claim_no)와 선박명(vessel_name)이다. 같은 청구 건의 서류인지는 청구서의 선박명·항차 번호(voyage_no)를 도착 통지서·항만 시간 기록·펌핑 기록의 값과 비교하고, 청구서의 청구 번호를 접수 기록의 청구 번호와 비교해 확인한다. 청구서가 없으면 이 비교는 하지 않는다.\n\n[판정 기준 — 용선계약 BPVOY4]\n1) 청구 기한: 접수 기록의 접수일(received_date)이 기한일(time_bar_date)과 같거나 그보다 앞서야 한다. 기한일은 양하 완료(호스 분리) 후 90일이며 접수 기록에 적힌 값을 그대로 쓴다. 날짜를 직접 계산하지 않는다. 접수일이 기한일과 같은 날이면 충족이다.\n2) 필수 서류 5종: Demurrage Claim Invoice, Claim Receipt Record, Notice of Readiness, Statement of Facts, Cargo Pumping Log가 모두 있어야 한다.\n3) 터미널 서명: Cargo Pumping Log의 terminal_signed가 true여야 한다. false인데 Letter of Protest가 첨부된 경우, 항의서가 서명을 대신하는지는 용선계약에 명시되어 있지 않으므로 통과로 보지 않고 담당자에게 넘긴다.\n4) 시각 일치: 청구서와 Statement of Facts가 둘 다 있고 두 일시가 모두 채워져 있을 때, 청구서의 completion_of_discharge가 Statement of Facts의 hoses_disconnected_time과 같아야 한다. 둘 중 한 서류가 없으면 비교하지 않는다.\n5) 동일 청구 건: 청구서가 있을 때, 다른 서류의 선박명과 항차 번호가 청구서와 같아야 하고 접수 기록의 청구 번호가 청구서의 청구 번호와 같아야 한다.\n각 값은 그 값이 적힌 서류의 추출 결과에서만 가져온다. 청구서의 completion_of_discharge가 빈 문자열이면 접수 기록이나 Statement of Facts에 적힌 일시로 대신 채우지 말고 1단계 '검토 필요'로 넘긴다.\n\n[판정 순서 — 반드시 이 순서로]\n- 1단계 '검토 필요': 선박명 또는 항차 번호가 청구서와 다른 서류가 있음 / 접수 기록의 청구 번호가 청구서와 다름 / 기준 4)의 두 일시가 다름 / Statement of Facts가 있고 그 readability가 'unclear'임 / 있는 서류인데 판정에 필요한 날짜·일시·선박명·항차 번호·청구 번호가 빈 문자열이거나 YYYY-MM-DD(일시는 YYYY-MM-DD HH:MM) 형식이 아님 / 같은 종류 서류가 여러 건인데 값이 서로 다름 / 펌핑 기록이 있고 그 terminal_signed가 false인데 Letter of Protest가 첨부되어 있음. 하나라도 해당하면 '검토 필요'로 판정하고 더 진행하지 않는다. 펌핑 기록이 없으면 항의서가 있어도 이 단계에 해당하지 않는다(펌핑 기록 누락으로 3단계에서 다룬다).\n- 2단계 '기한 위험': 접수 기록이 있고 접수일이 기한일보다 늦음. 접수 기록이 없으면 기한을 판단하지 않고 다음 단계로 간다.\n- 3단계 '보완 요청': 1단계와 2단계에 해당하지 않을 때만 본다. 필수 서류 5종 중 하나라도 누락 / 펌핑 기록에 터미널 서명이 없고 항의서도 없음. 접수일이 기한일보다 늦으면 서류가 빠졌거나 서명이 없어도 '보완 요청'이 아니라 2단계 '기한 위험'이다.\n- 4단계 '지급 검토 가능': 기준 1)~5)를 모두 충족.\n판정을 내기 전에 접수 기록의 접수일과 기한일을 반드시 먼저 비교하고, 1단계 → 2단계 → 3단계 → 4단계 순서로 처음 해당하는 단계에서 멈춘다.\n거절 사유를 추측으로 만들지 마라.\n\n[출력] 아래 키 다섯 개를 이 순서로, 한 줄에 하나씩 작성하라. 값은 추출 결과에서 가져온다.\nclaim_no: <청구서의 청구 번호. 청구서가 없으면 다른 서류에서 가져오지 말고 비워 둔다>\nvessel_name: <청구서의 선박명. 청구서가 없으면 다른 서류에서 가져오지 말고 비워 둔다. '정보 부족' 같은 말을 지어 넣지 않는다>\ndecision: <지급 검토 가능 | 보완 요청 | 기한 위험 | 검토 필요 중 하나>\nreason: <판정 근거 1~2문장, 한국어. 판정을 정한 기준과 실제 값(접수일·기한일·일시·서류 이름)만 적는다. 접수 기록이 없으면 '기한 내 접수'라고 쓰지 말고 접수일과 기한일을 확인하지 못했다고 쓴다. 추출 결과에 없는 문서 번호·날짜·사람 이름을 쓰지 않는다. reason 줄은 한 번만 쓰고 줄을 나누지 않는다. terminal_signed, hoses_disconnected_time 같은 내부 항목 이름과 '빈 문자열', '1단계' 같은 내부 표현은 쓰지 않고 \"터미널 서명 없음\", \"Statement of Facts의 호스 분리 일시를 판독할 수 없음\"처럼 풀어 쓴다>\nmissing_documents: <누락된 필수 서류의 영문 이름을 JSON 배열로. 이름은 Demurrage Claim Invoice / Claim Receipt Record / Notice of Readiness / Statement of Facts / Cargo Pumping Log 중에서 글자 그대로 쓰고 큰따옴표로 감싼다. 예: [\"Notice of Readiness\"]. 누락이 없으면 [] 만 쓴다. 서명 없음은 누락이 아니므로 여기에 적지 않는다. 어느 판정이 나와도 실제로 빠진 필수 서류를 전부 적는다>\n마지막 줄에 decision 값만 한 번 더 적어라.",
           "enumEnabled": true,
           "enumValues": [
             "지급 검토 가능",
@@ -469,11 +467,6 @@
           "name": "검토필요_메모",
           "modelName": "",
           "prompt": "앞선 판정 #청구_판정 결과가 '검토 필요'인 건이다. 정산 담당자용 확인 메모 초안을 작성하라. 문서에 없는 값은 절대 생성하지 마라.\n구성: 청구 번호·선박명 / 검토 필요 사유(다른 선박 서류, 일시 불일치, 판독 불가 중 해당 항목과 실제 값) / 담당자가 원문에서 확인할 위치. 300자 이내, 한국어."
-        },
-        {
-          "name": "미분류_안내",
-          "modelName": "",
-          "prompt": "이 문서는 체선료 청구 검증용 6종(청구서·접수 기록·도착 통지서·항만 시간 기록·펌핑 기록·항의서)에 해당하지 않아 분류되지 않았다. 문서에 없는 값은 절대 생성하지 마라.\n한 줄로 작성하라: likely_document_type=<문서가 무엇으로 보이는지>, review_reason=<왜 분류되지 않았는지>, operator_action=<담당자가 할 일: 무시 / 선주에게 올바른 서류 요청 / 수동 확인>."
         }
       ],
       "connectionMapping": {

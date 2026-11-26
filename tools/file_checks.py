@@ -1,4 +1,7 @@
-"""정답지와 제출 폴더의 파일·워크플로 JSON·유형표를 서로 맞춰 보는 검사."""
+"""정답지와 제출 폴더의 파일·워크플로 JSON·유형표를 서로 맞춰 보는 검사.
+
+파일과 구조가 서로 맞는지만 본다. 판정 규칙이 옳은지, Studio 실행 결과가 정답과 같은지는 보지 않는다.
+"""
 from __future__ import annotations
 
 import json
@@ -11,6 +14,7 @@ from checks import ERROR, INFO, WARN, Finding, case_files, decision_keys, normal
 TYPE_MARKS = "①②③④"
 MIN_TYPES = 3
 IDENTIFIER = re.compile(r"[A-Za-z_][A-Za-z0-9_]*")
+LINE_LABEL = re.compile(r"^[ 	]*([A-Za-z_][A-Za-z0-9_]*)[ 	]*:", re.MULTILINE)
 COLUMN_HINTS = {
     "file": "파일", "unit": "판정 단위", "kind": "문서 종류",
     "type": "유형", "purpose": "시험 목적", "expected": "기대 결과",
@@ -60,21 +64,72 @@ def _strings(node: Any) -> Iterator[str]:
             yield from _strings(item)
 
 
-def check_workflow_keys(output_keys: list[str], workflows: dict[str, Any]) -> list[Finding]:
-    """내보낸 워크플로 JSON 어딘가에 출력 키가 글자 그대로 있는지 본다."""
-    if not workflows:
-        return [Finding(WARN, "workflow", "워크플로 설정 JSON이 없어 출력 키를 대조하지 못했습니다.")]
-    texts = [text for wf in workflows.values() for text in _strings(wf)]
-    identifiers = {token for text in texts for token in IDENTIFIER.findall(text)}
+def _judge_nodes(node: Any) -> Iterator[dict[str, Any]]:
+    """판정 Instruct 노드: 지시문(prompt)이 있고 판정값 enum이 켜진 노드."""
+    if isinstance(node, dict):
+        if isinstance(node.get("prompt"), str) and (node.get("enumEnabled") or node.get("enumValues")):
+            yield node
+        for value in node.values():
+            yield from _judge_nodes(value)
+    elif isinstance(node, list):
+        for item in node:
+            yield from _judge_nodes(item)
+
+
+def _line_labels(prompt: str) -> list[str]:
+    """지시문에서 '키: <값>'처럼 행의 맨 앞에 놓인 라벨만 순서대로 모은다. 문장 속에 언급된 이름은 세지 않는다."""
+    return [match.group(1) for match in LINE_LABEL.finditer(prompt)]
+
+
+def _check_judge_node(name: str, node: dict[str, Any], output_keys: list[str], decision_values: list[str] | None) -> list[Finding]:
+    where = f"{name} · 판정 노드 '{node.get('name', '?')}'"
+    labels = _line_labels(node["prompt"])
+    identifiers = set(IDENTIFIER.findall(node["prompt"]))
     findings: list[Finding] = []
     for key in output_keys:
-        if any(key in text for text in texts):
+        if key in labels:
             continue
-        twins = sorted(t for t in identifiers if normalize(t) == normalize(key) and t != key)
+        twins = sorted(t for t in identifiers if t != key and (normalize(t) == normalize(key) or key in t))
         hint = f" 비슷한 이름 {twins}가 있습니다 — 표기가 다르면 0점입니다." if twins else ""
-        findings.append(Finding(ERROR, "workflow", f"출력 키 '{key}'를 워크플로 JSON에서 찾지 못했습니다.{hint}"))
-    if not findings:
-        findings.append(Finding(INFO, "workflow", f"출력 키 {len(output_keys)}개가 모두 워크플로 JSON에 있습니다."))
+        findings.append(Finding(ERROR, where, f"출력 키 '{key}'가 출력 지시의 행 시작 라벨('{key}: ...')로 없습니다.{hint}"))
+    found = [label for label in labels if label in output_keys]
+    if not findings and found != output_keys:
+        findings.append(Finding(WARN, where, f"출력 지시의 키 순서 {found}가 정답지의 output_keys 순서 {output_keys}와 다릅니다."))
+    enum = list(node.get("enumValues") or [])
+    if decision_values is not None and enum != list(decision_values):
+        level = ERROR if sorted(enum) != sorted(decision_values) else WARN
+        findings.append(Finding(level, where, f"판정값 enum {enum}이 정답지의 decision_values {list(decision_values)}와 다릅니다."))
+    if decision_values is not None and not node.get("enumEnabled"):
+        findings.append(Finding(WARN, where, "판정값 enum이 꺼져 있습니다(enumEnabled)."))
+    return findings
+
+
+def check_workflow_keys(output_keys: list[str], workflows: dict[str, Any], decision_values: list[str] | None = None) -> list[Finding]:
+    """내보낸 워크플로 JSON의 판정 Instruct 노드가 출력 키를 행 시작 라벨로 지시하고, enum이 판정값과 같은지 본다.
+
+    구조 검사다. 다른 노드나 설명 문장에 키와 비슷한 글자가 있는 것만으로는 통과시키지 않는다.
+    워크플로가 실제로 그 키와 값을 출력하는지(Studio 실행 정확도)는 이 검사로 알 수 없다.
+    """
+    if not workflows:
+        return [Finding(WARN, "workflow", "워크플로 설정 JSON이 없어 출력 키를 대조하지 못했습니다.")]
+    findings: list[Finding] = []
+    for name, workflow in workflows.items():
+        nodes = list(_judge_nodes(workflow))
+        if len(nodes) != 1:
+            texts = list(_strings(workflow))
+            seen = [key for key in output_keys if any(key in text for text in texts)]
+            twins = sorted({t for text in texts for t in IDENTIFIER.findall(text) for key in output_keys
+                            if t != key and normalize(t) == normalize(key)})
+            hint = f" 비슷한 이름 {twins}가 있습니다 — 표기가 다르면 0점입니다." if twins else ""
+            findings.append(Finding(ERROR, name, (
+                f"판정값 enum이 켜진 Instruct 노드가 {len(nodes)}개라 출력 키를 대조하지 못했습니다. "
+                f"JSON 어딘가에 글자가 있는 키 {seen}는 참고일 뿐 통과가 아닙니다.{hint}")))
+            continue
+        checked = _check_judge_node(name, nodes[0], output_keys, decision_values)
+        findings.extend(checked or [Finding(INFO, name, (
+            f"판정 노드 '{nodes[0].get('name', '?')}'의 출력 지시에 키 {len(output_keys)}개가 행 시작 라벨로 있고"
+            + (f" enum {len(decision_values)}개가 decision_values와 같습니다." if decision_values is not None else " (enum은 대조하지 않음).")
+            + " 구조 검사이며 Studio 실행 정확도 검증이 아닙니다."))])
     return findings
 
 

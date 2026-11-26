@@ -1,0 +1,165 @@
+{
+  "task": "지시문 수정안 경계값 시험(제출 데이터셋 아님)",
+  "unit": "청구 1건 = 파일 1개",
+  "output_keys": [
+    "claim_no",
+    "vessel_name",
+    "decision",
+    "reason",
+    "missing_documents"
+  ],
+  "decision_values": [
+    "지급 검토 가능",
+    "보완 요청",
+    "기한 위험",
+    "검토 필요"
+  ],
+  "cases": [
+    {
+      "case_id": "R1",
+      "file": "probe2_R1.pdf",
+      "documents": [
+        "Demurrage Claim Invoice",
+        "Claim Receipt Record",
+        "Notice of Readiness",
+        "Statement of Facts",
+        "Cargo Pumping Log"
+      ],
+      "answer": {
+        "claim_no": "DMG-2026-0690",
+        "vessel_name": "MT GARIWANG LOG",
+        "decision": "검토 필요",
+        "reason": "Claim Receipt Record의 접수일(빈 값): 비어 있거나 정해진 형식의 날짜가 아니어서 비교할 수 없음",
+        "missing_documents": []
+      }
+    },
+    {
+      "case_id": "R2",
+      "file": "probe2_R2.pdf",
+      "documents": [
+        "Demurrage Claim Invoice",
+        "Claim Receipt Record",
+        "Notice of Readiness",
+        "Statement of Facts",
+        "Cargo Pumping Log"
+      ],
+      "answer": {
+        "claim_no": "DMG-2026-0697",
+        "vessel_name": "MT MINJUJI SPAN",
+        "decision": "검토 필요",
+        "reason": "Claim Receipt Record의 기한일(빈 값): 비어 있거나 정해진 형식의 날짜가 아니어서 비교할 수 없음",
+        "missing_documents": []
+      }
+    },
+    {
+      "case_id": "R3",
+      "file": "probe2_R3.pdf",
+      "documents": [
+        "Demurrage Claim Invoice",
+        "Claim Receipt Record",
+        "Notice of Readiness",
+        "Statement of Facts",
+        "Cargo Pumping Log"
+      ],
+      "answer": {
+        "claim_no": "DMG-2026-0704",
+        "vessel_name": "MT DUTA HELM",
+        "decision": "검토 필요",
+        "reason": "Claim Receipt Record의 청구 번호(DMG-2026-0998)가 청구서(DMG-2026-0704)와 다름",
+        "missing_documents": []
+      }
+    },
+    {
+      "case_id": "R4",
+      "file": "probe2_R4.pdf",
+      "documents": [
+        "Demurrage Claim Invoice",
+        "Claim Receipt Record",
+        "Notice of Readiness",
+        "Statement of Facts",
+        "Cargo Pumping Log",
+        "Statement of Facts"
+      ],
+      "answer": {
+        "claim_no": "DMG-2026-0711",
+        "vessel_name": "MT BANGTAE YARD",
+        "decision": "검토 필요",
+        "reason": "Statement of Facts가 2건 제출되었고 값이 서로 다름(Hoses Disconnected 일시 2026-08-20 11:05 / 2026-08-20 09:15). 어느 쪽이 맞는지 정할 근거가 없어 담당자 확인이 필요함",
+        "missing_documents": []
+      }
+    },
+    {
+      "case_id": "R5",
+      "file": "probe2_R5.pdf",
+      "documents": [
+        "Demurrage Claim Invoice",
+        "Claim Receipt Record",
+        "Notice of Readiness",
+        "Statement of Facts",
+        "Cargo Pumping Log"
+      ],
+      "answer": {
+        "claim_no": "DMG-2026-0718",
+        "vessel_name": "MT HWAAK BOW",
+        "decision": "검토 필요",
+        "reason": "청구서의 양하 완료 일시 2026-08-04 02:50와 Statement of Facts의 Hoses Disconnected 2026-08-03 22:50가 다름",
+        "missing_documents": []
+      }
+    },
+    {
+      "case_id": "R6",
+      "file": "probe2_R6.pdf",
+      "documents": [
+        "Demurrage Claim Invoice",
+        "Claim Receipt Record",
+        "Notice of Readiness",
+        "Statement of Facts",
+        "Cargo Pumping Log",
+        "Letter of Protest"
+      ],
+      "answer": {
+        "claim_no": "DMG-2026-0725",
+        "vessel_name": "MT GAJI STERN",
+        "decision": "검토 필요",
+        "reason": "Cargo Pumping Log에 터미널 서명이 없고 Letter of Protest가 첨부됨. 항의서가 서명을 대신하는지는 용선계약(BPVOY4)에 명시되어 있지 않아 담당자 판단이 필요함",
+        "missing_documents": []
+      }
+    },
+    {
+      "case_id": "R7",
+      "file": "probe2_R7.pdf",
+      "documents": [
+        "Demurrage Claim Invoice",
+        "Claim Receipt Record",
+        "Notice of Readiness",
+        "Statement of Facts",
+        "Cargo Pumping Log"
+      ],
+      "answer": {
+        "claim_no": "DMG-2026-0732",
+        "vessel_name": "MT CHEONGTAE MAST",
+        "decision": "검토 필요",
+        "reason": "Demurrage Claim Invoice의 양하 완료 일시(빈 값): 비어 있거나 정해진 형식의 날짜가 아니어서 비교할 수 없음",
+        "missing_documents": []
+      }
+    },
+    {
+      "case_id": "R8",
+      "file": "probe2_R8.pdf",
+      "documents": [
+        "Demurrage Claim Invoice",
+        "Claim Receipt Record",
+        "Notice of Readiness",
+        "Statement of Facts",
+        "Cargo Pumping Log"
+      ],
+      "answer": {
+        "claim_no": "DMG-2026-0739",
+        "vessel_name": "MT UNMUN DECK",
+        "decision": "검토 필요",
+        "reason": "Claim Receipt Record의 청구 번호가 비어 있어 같은 청구 건인지 확인할 수 없음",
+        "missing_documents": []
+      }
+    }
+  ]
+}

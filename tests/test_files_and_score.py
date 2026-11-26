@@ -43,7 +43,10 @@ def write_table(path, answer, types=TYPES, header_offset=2):
 @pytest.fixture
 def submission(tmp_path, answer):
     (tmp_path / f"{PREFIX}answer.json").write_text(json.dumps(answer, ensure_ascii=False), encoding="utf-8")
-    workflow = {"nodes": [{"type": "Instruct", "schema": '{"decision": "", "permit_no": "", "missing_documents": []}'}]}
+    # Studio가 내보내는 모양: 판정 Instruct 노드의 지시문에 키가 행 시작 라벨로 있고 enum이 켜져 있다
+    judge = {"name": "판정", "prompt": "decision: <판정>\npermit_no: <허가 번호>\nmissing_documents: <목록>",
+             "enumEnabled": True, "enumValues": answer["decision_values"]}
+    workflow = {"workflowConfig": {"instructConfiguration": {"nodes": [judge]}}}
     (tmp_path / f"{PREFIX}workflow.json").write_text(json.dumps(workflow), encoding="utf-8")
     write_pdf(tmp_path / f"{PREFIX}설계서.pdf", pages=2)
     write_pdf(tmp_path / f"{PREFIX}발표자료.pdf")

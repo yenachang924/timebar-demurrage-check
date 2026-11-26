@@ -13,7 +13,7 @@ sys.path.insert(0, str(ROOT / "tools"))
 sys.path.insert(0, str(Path(__file__).parent))
 
 import pdfkit  # noqa: E402
-from cases import CASES, DECISIONS, answer  # noqa: E402
+from cases import CASES, DECISIONS, answer, doc_views  # noqa: E402
 from docs import NAMES, RENDERERS  # noqa: E402
 
 TASK = "유조선 체선료 청구 서류 검증 (가상 화주사 Daehan Energy Trading, BPVOY4 기준)"
@@ -24,8 +24,7 @@ OUTPUT_KEYS = ["claim_no", "vessel_name", "decision", "reason", "missing_documen
 
 def build_case(case: dict, prefix: str, number: int) -> dict:
     parts = []
-    for kind in case["docs"]:
-        view = {**case, **case["doc_overrides"].get(kind, {})}
+    for kind, view in doc_views(case):
         html = ROOT / "work" / "html" / f"{case['case_id']}_{kind}.html"
         html.parent.mkdir(parents=True, exist_ok=True)
         html.write_text(RENDERERS[kind](view), encoding="utf-8")

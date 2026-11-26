@@ -1,4 +1,7 @@
-"""제출 폴더 전체를 검사한다. 오류가 있으면 종료 코드 1.
+"""제출 폴더 전체를 검사한다(구조·파일 일치 검사). 오류가 있으면 종료 코드 1.
+
+통과는 파일 이름·정답지 형식·유형표·판정 노드의 키와 enum이 서로 맞는다는 뜻이다.
+판정 규칙이 옳다거나 Studio 실행 결과가 정답과 같다는 뜻이 아니다.
 
     uv run python tools/check_submission.py [--dir submission] [--team 이름] [--phase 최종제출]
 """
@@ -51,7 +54,8 @@ def run_checks(folder: Path, team: str, phase: str) -> list[Finding]:
             workflows[path.name] = load_json(path)
         except json.JSONDecodeError as error:
             findings.append(Finding(ERROR, path.name, f"JSON 문법 오류: {error}"))
-    findings.extend(check_workflow_keys(list(answer.get("output_keys") or []), workflows))
+    findings.extend(check_workflow_keys(
+        list(answer.get("output_keys") or []), workflows, list(answer.get("decision_values") or [])))
     table_path = folder / f"{prefix(team, phase)}유형표.xlsx"
     if table_path.is_file():
         findings.extend(check_type_table(read_type_table(table_path), answer, count_documents(answer)))
@@ -74,7 +78,7 @@ def main() -> int:
     errors = sum(f.level == ERROR for f in findings)
     warnings = sum(f.level == WARN for f in findings)
     print(f"\n{team} / {phase}: 오류 {errors}건, 주의 {warnings}건")
-    print("제출을 막는 오류가 있습니다." if errors else "도구가 볼 수 있는 범위에서는 오류가 없습니다. Studio 실행 결과는 score.py로 따로 확인하세요.")
+    print("제출을 막는 오류가 있습니다." if errors else "구조·파일 일치 검사 범위에서는 오류가 없습니다. 판정 규칙의 옳고 그름과 Studio 실행 정확도는 이 검사 범위 밖입니다.")
     return 1 if errors else 0
 
 

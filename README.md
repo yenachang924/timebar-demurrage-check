@@ -8,7 +8,7 @@ An Upstage Studio workflow that checks the evidence behind a tanker demurrage cl
 
 ## 링크
 
-- Studio 라이브러리 (승인 대기 중에는 404가 정상): https://studio.upstage.ai/library/agt_oUANWimsxumaoLSmTyisbb
+- Studio 라이브러리 (승인 대기 중에는 404가 정상): https://studio.upstage.ai/library/agt_4GHMtEjnPkTQzV9KnQgXzn
 - 데모 영상: `submission/TimeBar_최종제출_데모영상.mp4`
 
 ## 워크플로
@@ -29,7 +29,8 @@ Parse (OCR) → Classify (6종 + Other) → Extract × 6 → Merge → Instruct 
 ## 결과
 
 - 테스트 데이터: 가상 청구 10건, 서류 51개 (단순 28, 여러 양식 8, 예외 10, 저품질 6). 모든 문서는 가상이며 실제 회사·선박과 무관합니다.
-- 2026-11-26 Studio 설정 #4로 10건 전체를 두 번 실행: 두 번 모두 `decision`과 `missing_documents`가 10건 모두 정답지와 일치 (`work/runs/run03_v4_full.json`, `run04_v4_repeat.json`). `reason` 문장은 대조하지 않았습니다.
+- 2026-11-26 제출 설정은 **#7**입니다(판정 지시문 보강, 나머지 노드는 #4와 같음). 설정 #7로 10건 전체를 두 번 실행해 네 키(`claim_no`, `vessel_name`, `decision`, `missing_documents`)가 20건 모두 정답지와 일치했습니다 (`work/runs/run09_v7_full.json`, `run10_v7_repeat.json`, Studio 응답 원문에서 읽음). 경계값 21건은 세 번 실행해 64건 모두 기대값과 일치했습니다. `reason`은 문자열로 대조하지 않고 읽어서 확인했습니다. 반복 실행에서 분류·추출 단계는 Studio 캐시를 재사용했으므로, 반복으로 확인한 것은 판정 노드입니다.
+- (이전 설정) 2026-11-26 Studio 설정 #4로 10건 전체를 두 번 실행: 두 번 모두 `decision`과 `missing_documents`가 10건 모두 정답지와 일치 (`work/runs/run03_v4_full.json`, `run04_v4_repeat.json`). `reason` 문장은 대조하지 않았습니다.
 - 제출 데이터셋에 없는 새 조합 13건(`work/probes/`, 생성기 `work/gen/probes.py`)도 같은 설정으로 실행해 13건 모두 일치했습니다. 이 과정에서 청구서가 없는 묶음에서 `vessel_name`에 지어낸 문구가 들어가는 약점을 찾았고, 아직 고치지 않았습니다.
 - 처음 전체 실행에서는 9/10이었습니다. 실패 원인과 수정, 그 뒤의 검증 이력은 `CHANGELOG.md`와 `docs/verification_story.md`에 있습니다.
 
@@ -58,7 +59,7 @@ uv run pytest -q
 ## AI 도구를 쓴 방식
 
 - **Upstage Studio**가 문서를 읽고 판정합니다.
-- **Claude Code**는 출처 조사, 테스트 문서 생성, 실행 결과 채점을 맡았습니다.
+- **Claude Code**는 출처 조사, 테스트 문서 생성, 대조 코드 작성을 맡았습니다. Studio 실행 결과는 사람이 화면에서 옮겨 적었고, 코드는 그 값을 정답지와 글자 그대로 비교합니다(근거 문장의 의미는 비교하지 않습니다).
 - 정답지는 어느 모델의 출력도 아닌 규칙 코드(`work/gen/cases.py`)에서 나옵니다.
 - 판정 기준과 예외 처리 방침은 사람이 정했고, `docs/decisions.md`에 버전별로 남겼습니다.
 

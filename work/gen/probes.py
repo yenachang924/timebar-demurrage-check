@@ -16,7 +16,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 
 import pdfkit  # noqa: E402
 from build import SCAN  # noqa: E402
-from cases import FULL, answer, finish  # noqa: E402
+from cases import FULL, answer, doc_views, finish  # noqa: E402
 from docs import NAMES, RENDERERS  # noqa: E402
 
 OUT = ROOT / "work" / "probes"
@@ -56,8 +56,7 @@ PLAN = [
 
 def build(case: dict) -> dict:
     parts = []
-    for kind in case["docs"]:
-        view = {**case, **case["doc_overrides"].get(kind, {})}
+    for kind, view in doc_views(case):
         html = OUT / "html" / f"{case['case_id']}_{kind}.html"
         html.parent.mkdir(parents=True, exist_ok=True)
         html.write_text(RENDERERS[kind](view), encoding="utf-8")

@@ -1,0 +1,154 @@
+[
+ {
+  "case_id": "A",
+  "config": 7,
+  "config_id": "cfg_Vp8K6HEadjCkiraajKe2AK",
+  "job_id": "job_iXG5Qx69WBKavvjEgEE58C",
+  "status": "원문",
+  "output": {
+   "claim_no": "DMG-2026-0410",
+   "vessel_name": "MT HANBIT PIONEER",
+   "decision": "지급 검토 가능",
+   "reason": "접수 기록상 접수일은 2026-10-02이고 기한일은 2026-11-12로 기한 내이며, 필수 서류 5종이 모두 있고 펌핑 기록의 터미널 서명이 확인되며, 청구서의 양하 완료 일시 2026-08-14 17:30와 Statement of Facts의 호스 분리 일시 2026-08-14 17:30가 일치하고, 선박명·항차 번호·청구 번호도 관련 서류들 사이에 서로 일치합니다.",
+   "missing_documents": []
+  },
+  "note": "Studio API 응답 원문에서 읽음. 원문: docs/review/studio/cfg7/all_cfg7_jobs_raw.json"
+ },
+ {
+  "case_id": "B",
+  "config": 7,
+  "config_id": "cfg_Vp8K6HEadjCkiraajKe2AK",
+  "job_id": "job_gohNLFUjDDkkKHiX4gDFuS",
+  "status": "원문",
+  "output": {
+   "claim_no": "DMG-2026-0417",
+   "vessel_name": "MT SEORAK SPIRIT",
+   "decision": "보완 요청",
+   "reason": "접수 기록상 접수일은 2026-10-12이고 기한일은 2026-11-23으로 기한 경과는 확인되지 않으며, 필수 서류 5종은 모두 있으나 Cargo Pumping Log의 터미널 서명이 없어 보완 요청 대상이다.",
+   "missing_documents": []
+  },
+  "note": "Studio API 응답 원문에서 읽음. 원문: docs/review/studio/cfg7/all_cfg7_jobs_raw.json"
+ },
+ {
+  "case_id": "C",
+  "config": 7,
+  "config_id": "cfg_Vp8K6HEadjCkiraajKe2AK",
+  "job_id": "job_NWd8JdD82HdohQo2MWW9rM",
+  "status": "원문",
+  "output": {
+   "claim_no": "DMG-2026-0424",
+   "vessel_name": "MT JIRISAN GLORY",
+   "decision": "기한 위험",
+   "reason": "접수 기록상 접수일은 2026-10-29이고 기한일은 2026-10-28이므로 청구 기한을 넘겼다. 또한 청구서의 청구 번호 DMG-2026-0424, 선박명 MT JIRISAN GLORY, 항차 번호 JG-2609는 도착 통지서, 항만 시간 기록, 펌핑 기록과 일치하고, 청구서의 양하 완료 시각 2026-07-30 19:40은 Statement of Facts의 호스 분리 시각 2026-07-30 19:40과도 일치한다",
+   "missing_documents": []
+  },
+  "note": "Studio API 응답 원문에서 읽음. 원문: docs/review/studio/cfg7/all_cfg7_jobs_raw.json"
+ },
+ {
+  "case_id": "D",
+  "config": 7,
+  "config_id": "cfg_Vp8K6HEadjCkiraajKe2AK",
+  "job_id": "job_2eUTyTdVSY5qWUwLaWRrE3",
+  "status": "원문",
+  "output": {
+   "claim_no": "DMG-2026-0431",
+   "vessel_name": "MT BAEKDU VENTURE",
+   "decision": "지급 검토 가능",
+   "reason": "접수 기록상 접수일은 2026-11-01이고 기한일도 2026-11-01로 같아 기한 기준을 충족하며, 필수 서류 5종이 모두 있고 펌핑 기록의 터미널 서명이 확인된다. 또한 청구서의 양하 완료 일시 2026-08-03 14:20와 Statement of Facts의 호스 분리 일시 2026-08-03 14:20가 일치하고, 선박명 MT BAEKDU VENTURE 및 항차 번호 BV-2607가 청구서·도착 통지서·항만 시간 기록·펌핑 기록에서 서로 일치하며 접수 기록의 청구 번호도 DMG-2026-0431로 청구서와 같다.",
+   "missing_documents": []
+  },
+  "note": "Studio API 응답 원문에서 읽음. 원문: docs/review/studio/cfg7/all_cfg7_jobs_raw.json"
+ },
+ {
+  "case_id": "E",
+  "config": 7,
+  "config_id": "cfg_Vp8K6HEadjCkiraajKe2AK",
+  "job_id": "job_TFnWGioeyi2xib3N8dCLaj",
+  "status": "원문",
+  "output": {
+   "claim_no": "DMG-2026-0438",
+   "vessel_name": "MT HALLA CREST",
+   "decision": "보완 요청",
+   "reason": "접수 기록의 접수일은 2026-09-28이고 기한일은 2026-11-17로 기한 경과는 확인되지 않으며, 청구서·접수 기록·Statement of Facts·Cargo Pumping Log는 확인되지만 필수 서류인 Notice of Readiness는 추출 결과에서 확인되지 않아 보완 요청입니다.",
+   "missing_documents": [
+    "Notice of Readiness"
+   ]
+  },
+  "note": "Studio API 응답 원문에서 읽음. 원문: docs/review/studio/cfg7/all_cfg7_jobs_raw.json"
+ },
+ {
+  "case_id": "F",
+  "config": 7,
+  "config_id": "cfg_Vp8K6HEadjCkiraajKe2AK",
+  "job_id": "job_Zum4e38Z79pA7NvxYPqUTR",
+  "status": "원문",
+  "output": {
+   "claim_no": "DMG-2026-0445",
+   "vessel_name": "MT DOKDO TRADER",
+   "decision": "검토 필요",
+   "reason": "접수 기록상 접수일은 2026-10-07이고 기한일은 2026-12-01로 기한 경과는 아니지만, Cargo Pumping Log의 터미널 서명이 없고 Letter of Protest가 첨부되어 있어 규정상 담당자 검토로 넘겨야 한다.",
+   "missing_documents": []
+  },
+  "note": "Studio API 응답 원문에서 읽음. 원문: docs/review/studio/cfg7/all_cfg7_jobs_raw.json"
+ },
+ {
+  "case_id": "G",
+  "config": 7,
+  "config_id": "cfg_Vp8K6HEadjCkiraajKe2AK",
+  "job_id": "job_F5QHjPVbNWwwxc5YMYnczR",
+  "status": "원문",
+  "output": {
+   "claim_no": "DMG-2026-0452",
+   "vessel_name": "MT GEUMGANG STAR",
+   "decision": "검토 필요",
+   "reason": "Claim Receipt Record의 접수일은 2026-10-06이고 기한일은 2026-12-05로 접수일이 기한일보다 늦지는 않지만, Demurrage Claim Invoice의 양하 완료 일시 2026-09-06 21:15와 Statement of Facts의 호스 분리 일시 2026-09-06 15:15가 서로 달라 검토 필요입니다.",
+   "missing_documents": []
+  },
+  "note": "Studio API 응답 원문에서 읽음. 원문: docs/review/studio/cfg7/all_cfg7_jobs_raw.json"
+ },
+ {
+  "case_id": "H",
+  "config": 7,
+  "config_id": "cfg_Vp8K6HEadjCkiraajKe2AK",
+  "job_id": "job_oEouiDyPWS8XouCybywzDL",
+  "status": "원문",
+  "output": {
+   "claim_no": "DMG-2026-0459",
+   "vessel_name": "MT NAKDONG BREEZE",
+   "decision": "검토 필요",
+   "reason": "접수 기록상 접수일 2026-10-12와 기한일 2026-12-08은 확인되며 기한 경과는 아닙니다만, Cargo Pumping Log의 선박명 MT SEORAK SPIRIT와 항차 번호 SS-2611이 청구서의 선박명 MT NAKDONG BREEZE 및 항차 번호 NB-2614와 서로 달라 동일 청구 건으로 단정할 수 없어 검토 필요입니다.",
+   "missing_documents": []
+  },
+  "note": "Studio API 응답 원문에서 읽음. 원문: docs/review/studio/cfg7/all_cfg7_jobs_raw.json"
+ },
+ {
+  "case_id": "I",
+  "config": 7,
+  "config_id": "cfg_Vp8K6HEadjCkiraajKe2AK",
+  "job_id": "job_fWNcqm4aaQnYckL9dUmJ3c",
+  "status": "원문",
+  "output": {
+   "claim_no": "DMG-2026-0466",
+   "vessel_name": "MT TAEBAEK HORIZON",
+   "decision": "검토 필요",
+   "reason": "접수 기록상 접수일은 2026-10-12이고 기한일은 2026-12-13으로 기한 초과는 확인되지 않지만, 청구서의 양하 완료 일시 2026-09-14 23:30과 Statement of Facts의 호스 분리 일시는 추출 결과에 기재되어 있지 않아 시각 일치 여부를 확인할 수 없으므로 검토 필요로 판단한다.",
+   "missing_documents": []
+  },
+  "note": "Studio API 응답 원문에서 읽음. 원문: docs/review/studio/cfg7/all_cfg7_jobs_raw.json"
+ },
+ {
+  "case_id": "J",
+  "config": 7,
+  "config_id": "cfg_Vp8K6HEadjCkiraajKe2AK",
+  "job_id": "job_2AL7fjXQfrvDfr7xyLBFWq",
+  "status": "원문",
+  "output": {
+   "claim_no": "DMG-2026-0473",
+   "vessel_name": "MT ULLEUNG PEARL",
+   "decision": "지급 검토 가능",
+   "reason": "Claim Receipt Record의 접수일 2026-10-14는 기한일 2026-12-17보다 앞서며, Demurrage Claim Invoice·Claim Receipt Record·Notice of Readiness·Statement of Facts·Cargo Pumping Log가 모두 있고, 청구서의 양하 완료 일시 2026-09-18 05:05와 Statement of Facts의 호스 분리 일시 2026-09-18 05:05가 일치하며 Cargo Pumping Log에 터미널 서명이 있다",
+   "missing_documents": []
+  },
+  "note": "Studio API 응답 원문에서 읽음. 원문: docs/review/studio/cfg7/all_cfg7_jobs_raw.json"
+ }
+]
