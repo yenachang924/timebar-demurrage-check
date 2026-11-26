@@ -33,3 +33,6 @@ work/probes/pdf/
 work/probes/html/
 work/probes_v2/pdf/
 work/probes_v2/html/
+
+# 교체 전 제출 파일 보관 (공개하지 않는다)
+work/backup/

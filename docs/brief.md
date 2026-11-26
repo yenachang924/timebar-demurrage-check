@@ -45,7 +45,6 @@
 - 24시간 전 도착 통지를 하지 않으면 허용 정박 시간이 늘어날 수 있다(can)는 조항도 있다(§6.3.2) [17].
 - **도착 통지서의 시각 규칙이 규정집에 있다.** 통지 시각은 이메일로 터미널 플래너와 대리점에 보내고, 항계 도착 전에는 통지할 수 없다(§7.2.1, §7.2.2) [17].
 - **물량**: 2025년 Aramco 원유 수출 평균 하루 630만 배럴(연차보고서 p.62, 회사 단독 기준) [18]. 본선 인도 조건으로 판 물량은 운송과 체선 책임이 사는 쪽에 있으므로, 수출량이 곧 Aramco가 받는 청구 건수는 아니다.
-- **AI 방향 (2번 슬라이드의 작은 글씨와 Q&A에만 씀)**: Aramco는 2025년 지속가능성 보고서 요약본에서 전사에 거의 500개의 AI 활용 사례를 배치했다고 밝혔고(CEO 메시지, 인쇄 p.01), 2025년 기술 투자의 실현 가치 53억 달러 가운데 약 절반이 AI와 연결된다고 적었다(인쇄 p.02). 이 문서에는 해운·체선료·서류 확인에 관한 내용이 없으므로, 문제 정의의 근거가 아니라 "AI 워크플로가 이 회사의 방향과 맞는가"의 근거로만 쓴다 [25].
 - **한국 접점 (발표에는 쓰지 않음, 업무와의 연결이 약함)**: Aramco의 S-OIL 지분은 61.6%(Aramco 2025 연차보고서 p.57 그래픽, S-OIL 공시의 보통주 기준은 63.41%)이고, S-OIL은 울산 온산 산업단지에 하루 669,000배럴의 원유 정제 시설을 두고 있으며, S-OIL은 Saudi Aramco와 20년 장기 원유 공급 계약(2012년 체결)을 맺고 있다 [18][19][20][21].
 - **운송 (발표의 주된 근거, 2026-11-26 원문 대조)**: Bahri는 도착지 인도 조건으로 팔리는 Saudi Aramco 원유의 독점 운송사이고(연차보고서 p.56), 운송 계약 가운데 가장 큰 것이 Saudi Aramco와의 계약이다(p.30). 2025년 Aramco와 그 자회사에서 올린 매출은 4,727,083천 리얄이다(재무제표 주석 27, 2024년 4,238,859천). Aramco Trading에 원유 운송 서비스를 제공한다(연차보고서 p.144). Aramco는 Bahri 지분 20%를 보유한다(p.56). 회계 정책상 용선자가 허용 정박 시간을 넘긴 지연을 보상하고, 체선료는 운임 수익의 변동 대가로 잡는다(주석 4.2). 문서·승인·보고 업무 자동화 방침도 밝혔다(연차보고서 p.107) [23][24].
   - **적혀 있지 않은 것**: Aramco가 낸 체선료 금액, 체선료 수익을 Aramco와 연결한 주석, 청구 서류나 기한. "Aramco 그룹은 용선자로서 체선료 청구를 받는 쪽"은 위 사실들에서 끌어낸 추론이다.
@@ -176,7 +175,6 @@ Use Case Explorer `U038 컨테이너 지체료 무료기간 검산`(물류·운�
 21. S-OIL 보도자료, 20년 장기 원유 공급 계약 (2012-02-09) — https://www.s-oil.com/en/relation/NewsView.aspx?PageNo=24&SCategory=&SType=&SWord=&BoardDataIndex=12613
 23. Bahri Annual Report 2025 — https://www.bahri.sa/media/tn5n3xus/2025_bahri_annual_report_english-pdf.pdf
 24. Bahri 연결재무제표 FY2025 (수익 인식 §4.2, Note 8, 특수관계자 주석) — https://www.bahri.sa/media/z0ehqyl5/consolidated-financial-statements-and-independent-auditor-s-report-for-the-year-ended-31-december-2025.pdf
-25. Aramco Sustainability Report Executive Summary 2025 (CEO 메시지 인쇄 p.01, 기술과 AI 인쇄 p.02) — https://www.aramco.com/en/sustainability/sustainability-report/downloads (파일 이름 `2025-aramco-executive-summary-en.pdf`)
 
 ### 쓰지 않는 자료 (조사 기록)
 

@@ -48,10 +48,19 @@ TITLE = [
     ("An Upstage Studio workflow: Parse, Classify, Extract, Merge, Instruct", 28, False),
     ("All documents in this video are fictional samples.", 24, False),
 ]
-CLOSING = [
-    ("10 claim packages, 51 documents", 44, True),
-    ("10 of 10 decisions matched the answer key", 44, True),
+PROBLEM = [
+    ("One missing signature can erase the whole claim", 44, True),
     ("", 20, False),
+    ("Under BPVOY4, the claim and all supporting documents must arrive within 90 days.", 28, False),
+    ("Three English judgments: USD 535,784 of demurrage claims barred over documents.", 28, False),
+    ("Bahri's prospectus: under its contract with Aramco's subsidiary Bolanter,", 28, False),
+    ("demurrage is the rate payable by Bolanter when loading or discharge runs late.", 28, False),
+]
+CLOSING = [
+    ("84 of 84 runs matched on the submitted configuration", 44, True),
+    ("decision, missing documents, claim number, vessel name", 32, True),
+    ("", 20, False),
+    ("10 test packages run twice, 21 boundary packages run three times.", 28, False),
     ("Four decisions: clear for payment review, request documents,", 28, False),
     ("time-bar risk, review needed.", 28, False),
     ("The workflow never says \"reject\". That call belongs to a person.", 28, False),
@@ -109,6 +118,7 @@ def build() -> float:
         entries.append((name, seconds))
 
     add(card(TITLE), CARD_SECONDS)
+    add(card(PROBLEM), CARD_SECONDS + 2)
     for folder, start, end, speed, caption in SEGMENTS:
         frames = frames_between(folder, start, end)
         for index, (stamp, path) in enumerate(frames):
